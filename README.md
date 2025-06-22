@@ -194,3 +194,7 @@ Bu proje özel kullanım içindir.
 - **Jest**: Test framework
 - **Docker**: Containerization
 - **GitHub Actions**: CI/CD pipeline
+
+## 📝 Son Güncelleme
+
+Bu dosya Husky test için güncellenmiştir.
