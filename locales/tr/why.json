@@ -1,0 +1,12 @@
+{
+  "title": "Nedir?",
+  "description": "Kayıp, kaza, tehlike ve doğal afet gibi olağanüstü hallerde kişilerin yakınlarına, evcil hayvanlarına ve eşyalarına hızlıca ulaşmasını sağlayan bir araçtır.",
+  "howToUse": {
+    "title": "Nasıl kullanılır?",
+    "description1": "Kutu içinden çıkan etiketteki kod ile www.findthefinder.com kayıt sayfasında kaydolunur.",
+    "description2": "Etiket dışarıdan görünmek kaydıyla, telefon, kimlik, pasaport, ilaç kutusu, okul çantası, matara, anahtarlık, tasma gibi kişilerin çoğunlukla beraberinde taşıdıkları eşyalara yapıştırılır.",
+    "description3": "Olağanüstü bir durumda kalan kişinin beraberindeki eşya bulunduğunda, bulan, eşyada bulunan etiketteki yönlendirme ile kendi iletişim bilgisini sisteme verir.",
+    "description4": "Sistemde bu bilgiyi, kayıt esnasında sisteme bildirilmiş olan elektronik posta adresine anında gönderir.",
+    "description5": "Böylelikle olağanüstü hallerde kişilerin yakınlarına, eşyaların ve evcil hayvanların ise sahiplerine hemen ulaşması sağlanmış olur."
+  }
+}

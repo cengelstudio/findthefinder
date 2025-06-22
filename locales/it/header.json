@@ -1,0 +1,19 @@
+{
+  "home": "Home",
+  "about": "Chi siamo",
+  "contact": "Contatto",
+  "login": "Accedi",
+  "register": "Registrati",
+  "account": "Account",
+  "logout": "Disconnetti",
+  "nav": {
+    "faq": "Domande frequenti",
+    "whatIsIt": "Cos'è?",
+    "warning": "Avviso",
+    "iFound": "Ho trovato"
+  },
+  "welcomeScreen": {
+    "title": "perso & trovato",
+    "subtitle": "Smetti di sparire e di perdere!"
+  }
+}

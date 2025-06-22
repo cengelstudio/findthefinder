@@ -1,0 +1,16 @@
+{
+  "title": "Ho trovato",
+  "description": "PER FAVORE LEGGI IL CODICE QR SULL'OGGETTO",
+  "uppercaseTitle": "SEI FANTASTICO",
+  "you": "SEI",
+  "code": "Inserisci il codice che hai trovato",
+  "email": "Indirizzo e-mail",
+  "phone": "Il tuo numero di telefono (opzionale)",
+  "send": "Invia",
+
+  "updateError": "Si è verificato un errore durante l'autorizzazione, controlla le informazioni.",
+  "invalidEmail": "Indirizzo e-mail non valido.",
+  "anError": "Si è verificato un errore.",
+  "thanks": "La tua segnalazione è stata inviata con successo, grazie!",
+  "missingLabel": "Manca il codice dell'etichetta."
+}

@@ -1,0 +1,76 @@
+{
+  "description1": "Es una herramienta utilizada para devolver objetos perdidos a sus dueños.",
+  "description2": "¿Cómo funciona? Muy simple.",
+  "bavulYazi": "SI LO DESEA, PUEDE AMPLIAR E IMPRIMIR LAS ETIQUETAS DE FIND THE FINDER ANTES DE SU VIAJE Y AGREGARLAS A SUS MALETAS.",
+  "yaziEtiketElektronik": "¡UTILICE SUS ETIQUETAS PARA RECORDAR SU INFORMACIÓN DE CUENTA, COMO CONTRASEÑA, CORREO ELECTRÓNICO, ETC., NECESARIA PARA ACCEDER A DISPOSITIVOS ELECTRÓNICOS Y APLICACIONES MÓVILES, PARA NO ARREPENTIRSE DESPUÉS!",
+  "aniNot1": "¡COLOQUE LA ETIQUETA EN EL LUGAR DONDE GUARDA SUS RECUERDOS, CUADERNOS, ÁLBUMES DE FOTOS, ETC.!",
+  "aniNot2": "¡INICIE SESIÓN EN SU CUENTA Y ENCUENTRE FÁCILMENTE LO QUE TIENE, DÓNDE Y CUÁNDO!",
+  "buySticker": {
+    "title": "Escanee el código QR de la etiqueta y regístrese",
+    "description": "Inicie sesión en el sistema cuando desee agregar un nuevo código."
+  },
+  "activeSticker": {
+    "title": "Coloque la etiqueta",
+    "description": "Coloque la etiqueta en el objeto. (Teléfono, billetera, pasaporte, etc.)"
+  },
+  "contactTheFinder": {
+    "title": "Encuentra tu objeto",
+    "description": "La persona que escanea el código QR de la etiqueta ingresa su información de contacto en el sistema, y esta información se envía a su dirección de correo electrónico registrada. Esto le permite ponerse en contacto con el buscador y asegurar el objeto."
+  },
+  "award": {
+    "title": "PREMIO",
+    "description": "Si el objeto encontrado se devuelve a su dueño, el buscador participará en el programa de sorteos de Find The Finder. Los premios se envían automáticamente a las direcciones de correo electrónico de los ganadores de los sorteos realizados periódicamente por el sistema."
+  },
+  "youCanFindSafe": {
+    "title": "¡Nota para explicar su contraseña, cuenta de correo electrónico e información similar!",
+    "description": "Cuando necesite recordar su información, inicie sesión en su cuenta de FIND The Finder y vea su calificación ahora!"
+  },
+  "ftfTag": "Compre ahora la etiqueta de seguridad de Find The Finder.",
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "q1": {
+      "q": "¿Cómo puedo activar mi etiqueta comprada?",
+      "a": "Puede activar su etiqueta comprada en la sección 'registrarse' de nuestro sitio web."
+    },
+    "q3": {
+      "q": "¿Cuánto tiempo es válida mi etiqueta?",
+      "a": "Su etiqueta es válida por 1 (un) AÑO desde el momento en que se registra en el sistema."
+    },
+    "q4": {
+      "q": "¿Debo pagar otra tarifa al sistema?",
+      "a": "No paga ninguna otra tarifa al sistema aparte de la tarifa de la etiqueta."
+    },
+    "q5": {
+      "q": "Tengo más de una etiqueta, ¿debo registrarme por separado para cada una?",
+      "a": "No. Puede activar varias etiquetas con una cuenta de usuario."
+    },
+    "q6": {
+      "q": "¿Es posible que termine completamente el registro que abrí en www.findthefinder.com con mi etiqueta?",
+      "a": "Puede cerrar el registro que abrió en www.findthefinder.com cuando lo desee."
+    },
+    "q7": {
+      "q": "Olvidé el código con el que activé mi etiqueta. ¿Qué debo hacer en este caso?",
+      "a": "Puede acceder a su información a través del enlace que le enviaremos a la dirección de correo electrónico que proporcionó durante el registro en www.findthefinder.com."
+    },
+    "q8": {
+      "q": "Mi dirección de correo electrónico o número de SMS ha cambiado, ¿puedo actualizar la información en el sistema?",
+      "a": "Puede actualizar su información en cualquier momento con la ayuda de su contraseña que ha creado en www.findthefinder.com."
+    },
+    "q9": {
+      "q": "He perdido mi objeto etiquetado, ¿la persona u organización que lo encontró puede acceder a mi información?",
+      "a": "La información de contacto de la persona u organización que encontró su objeto etiquetado le llegará a través de www.findthefinder.com."
+    },
+    "q10": {
+      "q": "Aunque ingresé el código en mi etiqueta y envié mi información al sistema, no pude registrarme, ¿cuál es el problema?",
+      "a": "Complete el formulario de contacto en www.findthefinder.com y nos pondremos en contacto con usted lo antes posible."
+    }
+  },
+  "contact": {
+    "title": "CONTÁCTENOS",
+    "name": "Su nombre",
+    "email": "Dirección de correo electrónico",
+    "phone": "Número de teléfono",
+    "message": "Mensaje",
+    "send": "Enviar"
+  }
+}

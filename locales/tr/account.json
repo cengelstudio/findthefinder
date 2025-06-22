@@ -1,0 +1,27 @@
+{
+  "title": "Hesabım",
+  "addNewCode": "Yeni kod ekle (isteğe bağlı)",
+  "codeDesc": "Not",
+  "activeCodes": "Aktif kodlarım",
+  "deleteAccount": "Hesabımı sil",
+  "logout": "Sistemden çık",
+  "save": "Kaydet",
+  "definePassword": "Şifre belirleyin",
+  "confirmPassword": "Şifreyi onaylayın",
+  "backupMail": "İkincil e-posta adresi (isteğe bağlı)",
+  "phone": "Telefon numaranız",
+  "email": "E-posta adresiniz",
+  "code": "Kod",
+  "description": "Açıklama",
+  "loading": "Yükleniyor...",
+
+  "deleteConfirm": "Hesabınızı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+  "anError": "Bir hata meydana geldi.",
+  "accountDeleted": "Hesabınız başarıyla silindi.",
+  "authError": "Yetkilendirilirken bir hata meydana geldi, tekrar giriş yapın.",
+
+  "updateError": "Yetkilendirilirken bir hata meydana geldi, lütfen bilgileri kontrol ediliniz.",
+  "invalidEmail": "Geçersiz e-posta adresi.",
+
+  "updated": "Değişiklikler başarıyla güncellendi!"
+}

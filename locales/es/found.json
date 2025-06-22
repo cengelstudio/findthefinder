@@ -1,0 +1,16 @@
+{
+  "title": "He encontrado",
+  "description": "POR FAVOR, LEA EL CÓDIGO QR EN EL ARTÍCULO",
+  "uppercaseTitle": "ERES INCREÍBLE",
+  "you": "ERES",
+  "code": "Por favor, introduce el código que encontraste",
+  "email": "Dirección de correo electrónico",
+  "phone": "Tu número de teléfono (opcional)",
+  "send": "Enviar",
+
+  "updateError": "Ocurrió un error durante la autorización, por favor verifica la información.",
+  "invalidEmail": "Dirección de correo electrónico no válida.",
+  "anError": "Ha ocurrido un error.",
+  "thanks": "¡Tu notificación fue enviada con éxito, gracias!",
+  "missingLabel": "Falta el código de la etiqueta."
+}

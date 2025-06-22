@@ -1,0 +1,12 @@
+{
+  "title": "Was ist das?",
+  "description": "Es ist ein Werkzeug, das es Menschen ermöglicht, in außergewöhnlichen Situationen wie Verlust, Unfall, Gefahr oder Naturkatastrophe schnell ihre Angehörigen, Haustiere und verlorene Gegenstände zu erreichen.",
+  "howToUse": {
+    "title": "Wie benutzt man es?",
+    "description1": "Registrieren Sie sich auf der Registrierungsseite www.findthefinder.com mit dem Etikett aus der Box.",
+    "description2": "Vorausgesetzt, das Etikett ist von außen sichtbar, wird es an Gegenständen angebracht, die Menschen normalerweise bei sich tragen, wie Telefon, Ausweis, Reisepass, Medikamentenbox, Schultasche, Wasserflasche, Schlüsselanhänger, Leine.",
+    "description3": "Wenn der Gegenstand, der die Person in einer außergewöhnlichen Situation begleitet, gefunden wird, gibt der Finder seine eigenen Koordinaten in das System ein, indem er den Anweisungen auf dem Etikett folgt.",
+    "description4": "Das System sendet diese Informationen sofort an Sie und an einen Angehörigen, den Sie bei der Registrierung angegeben haben.",
+    "description5": "So wird sichergestellt, dass Menschen ihre Liebsten und verlorene Gegenstände und Haustiere im Notfall sofort wiederfinden."
+  }
+}

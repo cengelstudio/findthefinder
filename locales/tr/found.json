@@ -1,0 +1,16 @@
+{
+  "title": "Buldum",
+  "description": "LÜTFEN EŞYA ÜZERİNDEKİ KAREKODU OKUTUNUZ",
+  "uppercaseTitle": "HARİKASINIZ",
+  "you": "SİZ",
+  "code": "Lütfen bulduğunuz kodu giriniz",
+  "email": "E-Posta adresiniz",
+  "phone": "Telefon numaranız (isteğe bağlı)",
+  "send": "Gönder",
+
+  "updateError": "Yetkilendirilirken bir hata meydana geldi, lütfen bilgileri kontrol ediliniz.",
+  "invalidEmail": "Geçersiz e-posta adresi.",
+  "anError": "Bir hata meydana geldi.",
+  "thanks": "İhbarınız başarıyla gönderildi, teşekkür ederiz!",
+  "missingLabel": "Etiket kodu eksik."
+}

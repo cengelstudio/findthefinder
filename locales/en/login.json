@@ -1,0 +1,12 @@
+{
+  "title": "Login",
+  "uppercaseTitle": "LOGIN",
+  "codeOrMail": "E-mail address",
+  "password": "Password",
+
+  "updateError": "An error occurred while authorizing, please check the information.",
+  "invalidEmail": "Invalid e-mail address.",
+  "anError": "An error has occurred.",
+
+  "forgotPassword": "I forgot my password"
+}

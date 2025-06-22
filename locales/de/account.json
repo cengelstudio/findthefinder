@@ -1,0 +1,27 @@
+{
+  "title": "Konto",
+  "addNewCode": "Zusätzlichen Code hinzufügen (optional)",
+  "codeDesc": "Notiz",
+  "activeCodes": "Meine aktiven Codes",
+  "deleteAccount": "Konto löschen",
+  "logout": "Abmelden",
+  "save": "Speichern",
+  "definePassword": "Passwort festlegen",
+  "confirmPassword": "Passwort bestätigen",
+  "backupMail": "Zweite E-Mail-Adresse (optional)",
+  "phone": "Ihre Telefonnummer",
+  "email": "Ihre E-Mail-Adresse",
+  "code": "Code",
+  "description": "Beschreibung",
+  "loading": "Lädt...",
+
+  "deleteConfirm": "Sind Sie sicher, dass Sie Ihr Konto löschen möchten? Dieser Vorgang ist unwiderruflich.",
+  "anError": "Ein Fehler ist aufgetreten.",
+  "accountDeleted": "Ihr Konto wurde erfolgreich gelöscht.",
+  "authError": "Beim Autorisieren ist ein Fehler aufgetreten, bitte erneut anmelden.",
+
+  "updateError": "Beim Autorisieren ist ein Fehler aufgetreten, bitte überprüfen Sie die Angaben.",
+  "invalidEmail": "Ungültige E-Mail-Adresse.",
+
+  "updated": "Änderungen erfolgreich gespeichert!"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "S'inscrire",
+  "uppercaseTitle": "S'INSCRIRE",
+  "code": "Entrez le code au-dessus de l'étiquette",
+  "email": "Adresse e-mail",
+  "phone": "Ton numéro de téléphone",
+  "secondMail": "Adresse e-mail secondaire (facultatif)",
+  "password": "Mot de passe",
+  "rePassword": "Entrez à nouveau votre mot de passe",
+  "send": "Envoyer",
+  "acceptTerms": "J'accepte les conditions",
+
+  "needTerms": "Pour vous inscrire, vous devez accepter les conditions.",
+  "invalidCode": "Code non valide ou manquant.",
+  "invalidEmail": "Adresse e-mail invalide.",
+  "phoneError": "S'il vous plaît entrer un numéro de téléphone valide.",
+  "passwordMatch": "Les mots de passe ne se correspondent pas.",
+  "tryAgainLater": "Une erreur s'est produite, veuillez réessayer plus tard.",
+  "alreadyRegisterEmail": "Cette adresse e-mail est enregistrée dans le système.",
+  "codeError": "Un tel code n'a pas été créé, si vous pensez que c'est une erreur, veuillez nous contacter.",
+  "systemError": "Une erreur s'est produite dans le système.",
+
+  "successRegister": "Enregistré avec succès!",
+  "codeDescription": "Description des codes"
+}

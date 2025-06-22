@@ -1,0 +1,27 @@
+{
+  "title": "Mon compte",
+  "addNewCode": "Ajouter un nouveau code (facultatif)",
+  "codeDesc": "Note",
+  "activeCodes": "mes codes actifs",
+  "deleteAccount": "Supprimer Mon Compte",
+  "logout": "Système De Sortie",
+  "save": "Sauver",
+  "definePassword": "Définir le mot de passe",
+  "confirmPassword": "Confirmez le mot de passe",
+  "backupMail": "Adresse e-mail secondaire (facultatif)",
+  "phone": "Ton numéro de téléphone",
+  "email": "Adresse e-mail",
+  "code": "Code",
+  "description": "Explication",
+  "loading": "Chargement...",
+
+  "deleteConfirm": "Êtes-vous sûr de vouloir supprimer votre compte ? Cette action ne peut pas être annulée.",
+  "anError": "Une erreur est survenue.",
+  "accountDeleted": "Votre compte a été supprimé avec succès.",
+  "authError": "Une erreur s'est produite lors de l'autorisation, reconnectez-vous.",
+
+  "updateError": "Une erreur s'est produite lors de l'autorisation, veuillez vérifier les informations.",
+  "invalidEmail": "Adresse e-mail invalide.",
+
+  "updated": "Modifications mises à jour avec succès!"
+}

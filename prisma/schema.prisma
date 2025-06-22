@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://sunucu:ftf+ftf+2@104.248.23.42:3306/ftf"
+}
+
+model user {
+  id              BigInt            @id @default(autoincrement())
+  email           String?           @db.VarChar(255)
+  name            String?           @db.VarChar(255)
+  phone           String?           @db.VarChar(255)
+  address         String?           @db.VarChar(255)
+  password        String?           @db.VarChar(255)
+  status          Int?
+  created_at      DateTime          @db.DateTime(6)
+  updated_at      DateTime          @updatedAt @db.DateTime(6)
+  gender          Int?
+  second_mail     String?           @db.VarChar(255)
+  activation_code activation_code[]
+  code            code[]
+}
+
+model admin {
+  id       BigInt    @id @default(autoincrement())
+  email    String?   @unique(map: "uq_admin_email") @db.VarChar(255)
+  password String?   @db.VarChar(255)
+  command  command[]
+}
+
+model finder {
+  id         BigInt   @id @default(autoincrement())
+  email      String?  @db.VarChar(255)
+  code       String?  @db.VarChar(255)
+  name       String?  @db.VarChar(255)
+  phone      String?  @db.VarChar(255)
+  created_at DateTime @db.DateTime(6)
+  updated_at DateTime @updatedAt @db.DateTime(6)
+}
+
+model code {
+  id           BigInt    @id @default(autoincrement())
+  content      String?   @unique(map: "uq_code_content") @db.VarChar(255)
+  note         String?   @db.VarChar(255)
+  activated_at DateTime? @db.DateTime(6)
+  command_id   BigInt?
+  user_id      BigInt?
+  created_at   DateTime  @db.DateTime(6)
+  updated_at   DateTime  @updatedAt @db.DateTime(6)
+  used_on      String?   @db.VarChar(255)
+  command      command?  @relation(fields: [command_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "fk_code_command_2")
+  user         user?     @relation(fields: [user_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "fk_code_user_3")
+
+  @@index([command_id], map: "ix_code_command_2")
+  @@index([user_id], map: "ix_code_user_3")
+}
+
+model command {
+  id         BigInt   @id @default(autoincrement())
+  prefix     String?  @db.VarChar(255)
+  amount     BigInt
+  note       String?  @db.VarChar(255)
+  admin_id   BigInt?
+  created_at DateTime @db.DateTime(6)
+  code       code[]
+  admin      admin?   @relation(fields: [admin_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "fk_command_admin_4")
+
+  @@index([admin_id], map: "ix_command_admin_4")
+}
+
+model activation_code {
+  id         BigInt   @id @default(autoincrement())
+  user_id    BigInt?
+  code       String?  @unique(map: "uq_activation_code_code") @db.VarChar(255)
+  type       Int?
+  created_at DateTime @db.DateTime(6)
+  user       user?    @relation(fields: [user_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "fk_activation_code_user_1")
+
+  @@index([user_id], map: "ix_activation_code_user_1")
+}
+
+model play_evolutions {
+  id            Int      @id
+  hash          String   @db.VarChar(255)
+  applied_at    DateTime @default(now()) @db.Timestamp(0)
+  apply_script  String?  @db.MediumText
+  revert_script String?  @db.MediumText
+  state         String?  @db.VarChar(255)
+  last_problem  String?  @db.MediumText
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Accedi",
+  "uppercaseTitle": "LOGIN",
+  "codeOrMail": "E-mail address",
+  "password": "Password",
+  "login": "Accedi",
+  "forgot": "Password dimenticata?",
+  "noAccount": "Non hai un account?",
+  "register": "Registrati",
+  "error": "E-mail o password non validi.",
+
+  "updateError": "An error occurred while authorizing, please check the information.",
+  "invalidEmail": "Invalid e-mail address.",
+  "anError": "An error has occurred.",
+
+  "forgotPassword": "I forgot my password"
+}

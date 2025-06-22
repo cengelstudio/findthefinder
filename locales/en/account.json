@@ -1,0 +1,27 @@
+{
+  "title": "Account",
+  "addNewCode": "Add additional code (optional)",
+  "codeDesc": "Note",
+  "activeCodes": "My active codes",
+  "deleteAccount": "Delete account",
+  "logout": "Logout",
+  "save": "Save",
+  "definePassword": "Define a password",
+  "confirmPassword": "Confirm your Password",
+  "backupMail": "Secondary email address (optional)",
+  "phone": "Your phone number",
+  "email": "Your email address",
+  "code": "Code",
+  "description": "Description",
+  "loading": "Loading...",
+
+  "deleteConfirm": "Are you sure you want to delete your account? This operation is irrevocable.",
+  "anError": "An error has occurred.",
+  "accountDeleted": "Your account has been successfully deleted.",
+  "authError": "An error occurred while authorizing, login again.",
+
+  "updateError": "An error occurred while authorizing, please check the information.",
+  "invalidEmail": "Invalid e-mail address.",
+
+  "updated": "Changes updated successfully!"
+}

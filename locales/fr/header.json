@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "faq": "FAQ",
+    "whatIsIt": "Qu'est-ce que c'est",
+    "contact": "Nous Contacter",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "warning": "Attention",
+    "iFound": "J'ai Trouvé"
+  },
+  "welcomeScreen": {
+    "title": "PERDU ET TROUVÉ",
+    "subtitle": "Plus besoin de se perdre et de perdre!"
+  }
+}

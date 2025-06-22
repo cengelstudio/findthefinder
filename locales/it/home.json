@@ -1,0 +1,81 @@
+{
+  "welcome": "Benvenuto su FindTheFinder!",
+  "find": "Ho trovato un oggetto",
+  "lost": "Ho perso un oggetto",
+  "howItWorks": "Come funziona",
+  "cta": "Inizia ora",
+  "description1": "È uno strumento utilizzato per restituire gli oggetti smarriti ai proprietari.",
+  "description2": "Come funziona? Molto semplice.",
+  "bavulYazi": "SE LO DESIDERI, PUOI INGRANDIRE E STAMPARE LE ETICHETTE FIND THE FINDER PRIMA DEL TUO VIAGGIO E AGGIUNGERLE ALLE TUE VALIGIE.",
+  "yaziEtiketElektronik": "USA LE TUE ETICHETTE PER RICORDARE LE INFORMAZIONI DEL TUO ACCOUNT, COME PASSWORD, E-MAIL, ECC., NECESSARIE PER ACCEDERE AI DISPOSITIVI ELETTRONICI E ALLE APPLICAZIONI MOBILI, COSÌ NON TE NE PENTIRAI IN SEGUITO!",
+  "aniNot1": "APPLICA L'ETICHETTA NEL LUOGO IN CUI CONSERVI I TUOI RICORDI, QUADERNI, ALBUM FOTOGRAFICI, ECC.!",
+  "aniNot2": "ACCEDI AL TUO ACCOUNT E TROVA FACILMENTE COSA HAI, DOVE E QUANDO!",
+  "buySticker": {
+    "title": "Scansiona il codice QR sull'etichetta e registrati",
+    "description": "Accedi al sistema quando vuoi aggiungere un nuovo codice."
+  },
+  "activeSticker": {
+    "title": "Applica l'etichetta",
+    "description": "Applica l'etichetta all'oggetto. (Telefono, portafoglio, passaporto, ecc.)"
+  },
+  "contactTheFinder": {
+    "title": "Trova il tuo oggetto",
+    "description": "La persona che scansiona il codice QR sull'etichetta inserisce le proprie informazioni di contatto nel sistema, e queste informazioni vengono inviate al tuo indirizzo e-mail registrato. Questo ti permette di metterti in contatto con chi ha trovato l'oggetto e di metterlo in sicurezza."
+  },
+  "award": {
+    "title": "PREMIO",
+    "description": "Se l'oggetto trovato viene restituito al proprietario, chi lo trova parteciperà al programma a premi Find The Finder. I premi vengono inviati automaticamente agli indirizzi e-mail dei vincitori delle estrazioni periodiche effettuate dal sistema."
+  },
+  "youCanFindSafe": {
+    "title": "Nota per spiegare la tua password, account e-mail e informazioni simili!",
+    "description": "Quando hai bisogno di ricordare le tue informazioni, accedi al tuo account FIND The Finder e visualizza subito il tuo punteggio!"
+  },
+  "ftfTag": "Acquista ora l'etichetta di sicurezza Find The Finder.",
+  "faq": {
+    "title": "Domande frequenti",
+    "q1": {
+      "q": "Come posso attivare la mia etichetta acquistata?",
+      "a": "Puoi attivare la tua etichetta acquistata nella sezione 'registrati' del nostro sito web."
+    },
+    "q3": {
+      "q": "Per quanto tempo è valida la mia etichetta?",
+      "a": "La tua etichetta è valida per 1 (uno) ANNO dal momento della registrazione nel sistema."
+    },
+    "q4": {
+      "q": "Devo pagare un'altra tassa al sistema?",
+      "a": "Non paghi nessun'altra tassa al sistema oltre a quella dell'etichetta."
+    },
+    "q5": {
+      "q": "Ho più di un'etichetta, devo registrarmi separatamente per ciascuna?",
+      "a": "No. Puoi attivare più etichette con un account utente."
+    },
+    "q6": {
+      "q": "È possibile terminare completamente la registrazione che ho aperto su www.findthefinder.com con la mia etichetta?",
+      "a": "Puoi chiudere la registrazione che hai aperto su www.findthefinder.com quando vuoi."
+    },
+    "q7": {
+      "q": "Ho dimenticato il codice con cui ho attivato la mia etichetta. Cosa devo fare in questo caso?",
+      "a": "Puoi accedere alle tue informazioni tramite il link che ti invieremo all'indirizzo e-mail fornito durante la registrazione su www.findthefinder.com."
+    },
+    "q8": {
+      "q": "Il mio indirizzo e-mail o numero di SMS è cambiato, posso aggiornare le informazioni nel sistema?",
+      "a": "Puoi aggiornare le tue informazioni in qualsiasi momento con la password che hai creato su www.findthefinder.com."
+    },
+    "q9": {
+      "q": "Ho perso il mio oggetto etichettato, la persona o l'organizzazione che lo ha trovato può accedere alle mie informazioni?",
+      "a": "Le informazioni di contatto della persona o dell'organizzazione che ha trovato il tuo oggetto etichettato ti arriveranno tramite www.findthefinder.com."
+    },
+    "q10": {
+      "q": "Anche se ho inserito il codice sulla mia etichetta e inviato le mie informazioni al sistema, non sono riuscito a registrarmi, qual è il problema?",
+      "a": "Compila il modulo di contatto su www.findthefinder.com e ti contatteremo il prima possibile."
+    }
+  },
+  "contact": {
+    "title": "CONTATTACI",
+    "name": "Il tuo nome",
+    "email": "Indirizzo e-mail",
+    "phone": "Numero di telefono",
+    "message": "Messaggio",
+    "send": "Invia"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "description1": "Es ist ein Werkzeug, das verwendet wird, um verlorene Gegenstände an ihre Besitzer zurückzugeben.",
+  "description2": "Wie funktioniert es? Ganz einfach.",
+  "bavulYazi": "WENN SIE MÖCHTEN, KÖNNEN SIE DIE FIND THE FINDER-ETIKETTEN VOR IHRER REISE VERGRÖSSERN UND AUSDRUCKEN UND SIE IHREN KOFFERN HINZUFÜGEN.",
+  "yaziEtiketElektronik": "VERWENDEN SIE IHRE ETIKETTEN, UM SICH AN IHRE KONTODATEN WIE PASSWORT, E-MAIL USW. ZU ERINNERN, DIE FÜR DEN ZUGANG ZU ELEKTRONISCHEN GERÄTEN UND MOBILEN ANWENDUNGEN ERFORDERLICH SIND, DAMIT SIE ES SPÄTER NICHT BEREUEN!",
+  "aniNot1": "BRINGEN SIE DAS ETIKETT AN DEM ORT AN, AN DEM SIE IHRE ERINNERUNGEN, NOTIZBÜCHER, FOTOALBEN USW. AUFBEWAHREN!",
+  "aniNot2": "MELDEN SIE SICH BEI IHREM KONTO AN UND FINDEN SIE EINFACH HERAUS, WAS SIE HABEN, WO UND WO!",
+  "buySticker": {
+    "title": "Scannen Sie den QR-Code auf dem Etikett und melden Sie sich an",
+    "description": "Melden Sie sich im System an, wenn Sie einen neuen Code hinzufügen möchten."
+  },
+  "activeSticker": {
+    "title": "Befestigen Sie das Etikett",
+    "description": "Befestigen Sie das Etikett am Gegenstand. (Telefon, Geldbörse, Reisepass usw.)"
+  },
+  "contactTheFinder": {
+    "title": "Finden Sie Ihren Gegenstand",
+    "description": "Die Person, die den QR-Code auf dem Etikett scannt, gibt ihre Kontaktdaten in das System ein, und diese Informationen werden an Ihre registrierte E-Mail-Adresse gesendet. So können Sie mit dem Finder in Kontakt treten und den Gegenstand sichern."
+  },
+  "award": {
+    "title": "PREIS",
+    "description": "Wenn der gefundene Gegenstand an seinen Besitzer zurückgegeben wird, nimmt der Finder am Find The Finder-Gewinnspiel teil. Die Preise werden automatisch an die E-Mail-Adressen der Gewinner der regelmäßig vom System durchgeführten Ziehungen gesendet."
+  },
+  "youCanFindSafe": {
+    "title": "Notiz, um Ihr Passwort, E-Mail-Konto und ähnliche Informationen zu erklären!",
+    "description": "Wenn Sie sich an Ihre Informationen erinnern müssen, melden Sie sich bei Ihrem FIND The Finder-Konto an und sehen Sie jetzt Ihre Bewertung!"
+  },
+  "ftfTag": "Kaufen Sie jetzt das Find The Finder-Sicherheitslabel.",
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": {
+      "q": "Wie kann ich mein gekauftes Etikett aktivieren?",
+      "a": "Sie können Ihr gekauftes Etikett im Bereich 'Registrieren' auf unserer Website aktivieren."
+    },
+    "q3": {
+      "q": "Wie lange ist mein Etikett gültig?",
+      "a": "Ihr Etikett ist ab dem Zeitpunkt der Registrierung im System 1 (ein) JAHR gültig."
+    },
+    "q4": {
+      "q": "Muss ich eine weitere Gebühr an das System zahlen?",
+      "a": "Sie zahlen keine weitere Gebühr an das System außer der Etikettgebühr."
+    },
+    "q5": {
+      "q": "Ich habe mehr als ein Etikett, muss ich mich für jedes einzeln registrieren?",
+      "a": "Nein. Sie können mehrere Etiketten mit einem Benutzerkonto aktivieren."
+    },
+    "q6": {
+      "q": "Kann ich die Registrierung, die ich mit meinem Etikett auf www.findthefinder.com eröffnet habe, vollständig beenden?",
+      "a": "Sie können die Registrierung, die Sie auf www.findthefinder.com eröffnet haben, jederzeit schließen."
+    },
+    "q7": {
+      "q": "Ich habe meinen Code, mit dem ich mein Etikett aktiviert habe, vergessen. Was muss ich in diesem Fall tun?",
+      "a": "Sie können auf Ihre Informationen über den Link zugreifen, den wir an die E-Mail-Adresse senden, die Sie bei der Registrierung auf www.findthefinder.com angegeben haben."
+    },
+    "q8": {
+      "q": "Meine E-Mail-Adresse oder SMS-Nummer hat sich geändert, kann ich die Informationen im System aktualisieren?",
+      "a": "Sie können Ihre Informationen jederzeit mit Ihrem Passwort aktualisieren, das Sie auf www.findthefinder.com erstellt haben."
+    },
+    "q9": {
+      "q": "Ich habe meinen markierten Gegenstand verloren, kann die Person oder Organisation, die ihn gefunden hat, auf meine Informationen zugreifen?",
+      "a": "Die Kontaktdaten der Person oder Organisation, die Ihren markierten Gegenstand gefunden hat, werden Ihnen über www.findthefinder.com mitgeteilt."
+    },
+    "q10": {
+      "q": "Obwohl ich den Code auf meinem Etikett eingegeben und meine Informationen an das System gesendet habe, konnte ich mich nicht registrieren, was ist das Problem?",
+      "a": "Füllen Sie das Kontaktformular auf www.findthefinder.com aus und wir werden uns so schnell wie möglich mit Ihnen in Verbindung setzen."
+    }
+  },
+  "contact": {
+    "title": "KONTAKTIEREN SIE UNS",
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer",
+    "message": "Nachricht",
+    "send": "Senden"
+  }
+}

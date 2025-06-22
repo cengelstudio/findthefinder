@@ -1,0 +1,85 @@
+{
+  "description1": "Il s'agit d'un outil utilisé pour revenir aux propriétaires d'articles perdus.",
+  "description2": "Comment? Très simple.",
+
+  "bavulYazi": "SI VOUS LE SOUHAITEZ, VOUS POUVEZ AGRANDIR ET IMPRIMER LES ÉTIQUETTES FIND THE FINDER AVANT VOTRE VOYAGE ET LES AJOUTER À VOS VALISES.",
+
+  "yaziEtiketElektronik": "MOT DE PASSE, E-MAIL, ETC. REQUIS POUR L'AUTORISATION D'ACCÈS AUX APPAREILS ÉLECTRONIQUES ET AUX APPLICATIONS MOBILES. UTILISEZ-LE POUR MEMORISER LES INFORMATIONS DE VOTRE COMPTE, AFIN DE NE PAS LE REGRETTER PLUS TARD !",
+
+  "aniNot1": "MÉMOIRE, CARNET, ALBUM PHOTO, etc. INSÉREZ L'ÉTIQUETTE À L'ENDROIT OÙ VOUS RANGEZ LES ARTICLES!",
+  "aniNot2": "CONNECTEZ-VOUS À VOTRE COMPTE ET TROUVEZ CE QUE VOUS AVEZ, OÙ ET OÙ, FACILEMENT!",
+
+  "buySticker": {
+    "title": "Scannez le QR Code sur l'Étiquette et Inscrivez-vous",
+    "description": "Connectez-vous au système lorsque vous souhaitez ajouter un nouveau code."
+  },
+  "activeSticker": {
+    "title": "Collez l'Étiquette",
+    "description": "Collez l'étiquette sur l'objet. (Téléphone, portefeuille, passeport, etc.)"
+  },
+  "contactTheFinder": {
+    "title": "Retrouvez Votre Objet",
+    "description": "La personne qui scanne le QR code sur l'étiquette saisit ses coordonnées dans le système, et ces informations sont envoyées à votre adresse e-mail enregistrée. Cela vous permet de contacter la personne qui a trouvé l'objet et de le sécuriser."
+  },
+
+  "award": {
+    "title": "PRIX",
+    "description": "Si l'objet trouvé est rendu à son propriétaire, le chercheur sera inclus dans le programme de tirage au sort Find The Finder. Les prix sont automatiquement envoyés aux adresses e-mail des gagnants des tirages au sort organisés périodiquement par le système."
+  },
+
+  "youCanFindSafe": {
+    "title": "Remarque pour expliquer votre mot de passe, votre compte par e-mail et vos informations similaires!",
+    "description": "Lorsque vous devez vous souvenir de vos informations, connectez-vous à votre compte Finder le Finder et consultez votre note maintenant!"
+  },
+
+  "ftfTag": "Achetez maintenant l'étiquette de sécurité Find The Finder.",
+
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "q1": {
+      "q": "Comment puis-je activer l'étiquette achetée?",
+      "a": "Vous pouvez activer votre étiquette achetée à partir de la section \"s'inscrire\" sur notre site Web."
+    },
+    "q3": {
+      "q": "Combien de temps mon étiquette est-elle valide?",
+      "a": "L'étiquette reste valide pour une durée d'un (1) an a partir de son enregistrement."
+    },
+    "q4": {
+      "q": "Dois-je payer une autre redevance au système?",
+      "a": "Vous ne payez aucun autre redevance au système autre que les frais d'étiquette."
+    },
+    "q5": {
+      "q": "J'ai plus d'une étiquette, dois-je m'inscrire séparément pour chacun?",
+      "a": "Non. Vous pouvez activer plusieurs étiquettes avec un seul compte utilisateur."
+    },
+    "q6": {
+      "q": " Est-il possible pour moi de mettre fin complètement à l'enregistrement que j'ai effectué sur www.findthefinder.com avec mon étiquette?",
+      "a": "Vous pouvez y mettre fin quand vous le souhaitez."
+    },
+    "q7": {
+      "q": "J'ai oublié mon code avec lequel j'ai activé mon étiquette. Que dois-je faire dans ce cas?",
+      "a": "Vous pouvez accéder à vos informations via le lien que nous vous enverrons à l'adresse e-mail que vous avez fournie lors de votre inscription sur www.findthefinder.com."
+    },
+    "q8": {
+      "q": "Mon adresse e-mail ou mon numéro de SMS a changé, puis-je mettre à jour les informations sur le système?",
+      "a": "Vous pouvez mettre à jour vos informations à tout moment à l'aide de votre mot de passe que vous avez créé sur www.findthefinder.com."
+    },
+    "q9": {
+      "q": "J'ai perdu mon objet étiqueté, la personne ou l'organisation qui l'a trouvé peut-elle accéder à mes informations?",
+      "a": "Les coordonnées de la personne ou de l'organisation qui a trouvé votre article étiqueté vous parviendront via www.findthefinder.com."
+    },
+    "q10": {
+      "q": "Bien que j'aie entré le code sur mon étiquette et inséré mes informations au système, je n'ai pas pu m'inscrire, quel est le problème?",
+      "a": "Remplissez le formulaire de contact sur www.findthefinder.com et nous vous contacterons dans les plus brefs délais."
+    }
+  },
+
+  "contact": {
+    "title": "NOUS CONTACTER",
+    "name": "Votre nom",
+    "email": "Adresse e-mail",
+    "phone": "Ton numéro de téléphone",
+    "message": "Votre message",
+    "send": "Envoyer"
+  }
+}

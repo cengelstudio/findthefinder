@@ -1,0 +1,31 @@
+{
+  "title": "Registrati",
+  "name": "Nome",
+  "surname": "Cognome",
+  "email": "Indirizzo e-mail",
+  "password": "Password",
+  "register": "Registrati",
+  "haveAccount": "Hai già un account?",
+  "login": "Accedi",
+  "error": "Si è verificato un errore durante la registrazione. Riprova.",
+  "uppercaseTitle": "REGISTRATI",
+  "code": "Inserisci il codice utente sull'etichetta",
+  "phone": "Numero di telefono",
+  "secondMail": "Secondo indirizzo e-mail (opzionale)",
+  "rePassword": "Conferma la password",
+  "send": "Invia",
+  "acceptTerms": "Accetto i termini",
+
+  "needTerms": "Per registrarti devi accettare i termini.",
+  "invalidCode": "Codice non valido o mancante.",
+  "invalidEmail": "Indirizzo e-mail non valido.",
+  "phoneError": "Inserisci un numero di telefono valido.",
+  "passwordMatch": "Le password non corrispondono.",
+  "tryAgainLater": "Si è verificato un errore, riprova più tardi.",
+  "alreadyRegisterEmail": "Questo indirizzo e-mail è già registrato nel sistema.",
+  "codeError": "Questo codice non è stato creato, se pensi ci sia un errore contattaci.",
+  "systemError": "Si è verificato un errore nel sistema.",
+
+  "successRegister": "Registrazione avvenuta con successo!",
+  "codeDescription": "Descrizione del codice"
+}

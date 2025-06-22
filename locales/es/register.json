@@ -1,0 +1,25 @@
+{
+  "title": "Register",
+  "uppercaseTitle": "REGISTER",
+  "code": "Please enter the user code on the sticker",
+  "email": "E-Mail address",
+  "phone": "Phone number",
+  "secondMail": "Secondary e-mail address (optional)",
+  "password": "Password",
+  "rePassword": "Confirm your password",
+  "send": "Send",
+  "acceptTerms": "I accept the terms",
+
+  "needTerms": "To register, you must agree to the terms.",
+  "invalidCode": "Invalid or missing code.",
+  "invalidEmail": "Invalid e-mail address.",
+  "phoneError": "Please enter a valid phone number.",
+  "passwordMatch": "The passwords don't match each other.",
+  "tryAgainLater": "An error has occurred, please try again later.",
+  "alreadyRegisterEmail": "This e-mail address is registered in the system.",
+  "codeError": "Such a code has not been created, if you think there is a mistake, please contact us.",
+  "systemError": "An error has occurred in the system.",
+
+  "successRegister": "Successfully registered!",
+  "codeDescription": "Code description"
+}

@@ -1,0 +1,15 @@
+{
+  "locales": ["en", "tr", "fr", "ru", "es", "de", "it", "gr"],
+  "defaultLocale": "tr",
+  "pages": {
+    "*": ["header", "footer", "lost_found", "faq"],
+    "/": ["home"],
+    "/sign_up": ["register"],
+    "/sign_in": ["login"],
+    "/faq": ["why"],
+    "/lost_found": ["found"],
+    "/warning": ["warning"],
+    "/account": ["account"],
+    "/forgot_password": ["forgotPassword"]
+  }
+}

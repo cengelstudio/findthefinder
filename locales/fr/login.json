@@ -1,0 +1,11 @@
+{
+  "title": "Connexion",
+  "uppercaseTitle": "CONNEXION",
+  "codeOrMail": "Adresse e-mail",
+  "password": "Mot de passe",
+  "updateError": "Une erreur s'est produite pendant l'autorisation, veuillez vérifier les informations.",
+  "invalidEmail": "Adresse e-mail invalide.",
+  "anError": "Une erreur s'est produite.",
+
+  "forgotPassword": "J'ai oublié mon mot de passe"
+}

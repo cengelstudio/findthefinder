@@ -1,0 +1,16 @@
+{
+  "title": "J'ai Trouvé",
+  "description": "VEUILLEZ LIRE LE QR CODE SUR L'ARTICLE",
+  "uppercaseTitle": "VOUS ETES GENIAL",
+  "you": "VOUS",
+  "code": "Veuillez entrer le code que vous avez trouvé",
+  "email": "Adresse e-mail",
+  "phone": "Votre numéro de téléphone (facultatif)",
+  "send": "Envoyer",
+
+  "updateError": "Une erreur s'est produite lors de l'autorisation, veuillez vérifier les informations.",
+  "invalidEmail": "Adresse e-mail invalide.",
+  "anError": "Une erreur est survenue.",
+  "thanks": "Votre rapport a été envoyé avec succès, merci!",
+  "missingLabel": "Le code de la balise est manquant."
+}

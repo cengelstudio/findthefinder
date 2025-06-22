@@ -1,0 +1,12 @@
+{
+  "title": "Giriş",
+  "uppercaseTitle": "GİRİŞ",
+  "codeOrMail": "E-posta adresiniz",
+  "password": "Şifre",
+
+  "updateError": "Yetkilendirilirken bir hata meydana geldi, lütfen bilgileri kontrol ediliniz.",
+  "invalidEmail": "Geçersiz e-posta adresi.",
+  "anError": "Bir hata meydana geldi.",
+
+  "forgotPassword": "Şifremi unuttum"
+}

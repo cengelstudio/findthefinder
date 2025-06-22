@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "faq": "P.F.",
+    "whatIsIt": "¿Qué es?",
+    "contact": "Contacto",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "warning": "Advertencia",
+    "iFound": "He encontrado"
+  },
+  "welcomeScreen": {
+    "title": "objetos perdidos",
+    "subtitle": "¡Deja de desaparecer y perder!"
+  }
+}

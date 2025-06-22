@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "faq": "F.A.Q.",
+    "whatIsIt": "What is it?",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "warning": "Warning",
+    "iFound": "I Found"
+  },
+  "welcomeScreen": {
+    "title": "lost & found",
+    "subtitle": "Stop disappearing and losing!"
+  }
+}

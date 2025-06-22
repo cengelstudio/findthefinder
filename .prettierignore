@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+
+# Environment files
+.env*
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# Generated files
+next-env.d.ts
+*.tsbuildinfo
+
+# Public assets
+public/
+
+# Prisma
+prisma/migrations/

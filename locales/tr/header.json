@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "faq": "S.S.S.",
+    "whatIsIt": "Nedir?",
+    "contact": "İletişim",
+    "login": "Giriş",
+    "register": "Kayıt Ol",
+    "warning": "Uyarı",
+    "iFound": "Buldum"
+  },
+  "welcomeScreen": {
+    "title": "EŞYA KAYBETMEYE SON",
+    "subtitle": "Kaybolmaya ve kaybetmeye son!"
+  }
+}

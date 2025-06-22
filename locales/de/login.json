@@ -1,0 +1,12 @@
+{
+  "title": "Anmelden",
+  "uppercaseTitle": "ANMELDEN",
+  "codeOrMail": "E-Mail-Adresse",
+  "password": "Passwort",
+
+  "updateError": "Beim Autorisieren ist ein Fehler aufgetreten, bitte überprüfen Sie die Angaben.",
+  "invalidEmail": "Ungültige E-Mail-Adresse.",
+  "anError": "Ein Fehler ist aufgetreten.",
+
+  "forgotPassword": "Ich habe mein Passwort vergessen"
+}

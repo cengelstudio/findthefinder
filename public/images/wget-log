@@ -1,0 +1,6 @@
+--2023-05-15 19:40:47--  https://webattach.mail.yandex.net/message_part_real/IMG-20230515-WA0025.jpg?exif_rotate=y
+Resolving webattach.mail.yandex.net (webattach.mail.yandex.net)... 87.250.251.147, 2a02:6b8::2:147
+Connecting to webattach.mail.yandex.net (webattach.mail.yandex.net)|87.250.251.147|:443... connected.
+HTTP request sent, awaiting response... 400 BadRequest
+2023-05-15 19:40:47 ERROR 400: BadRequest.
+

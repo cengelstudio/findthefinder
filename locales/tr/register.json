@@ -1,0 +1,25 @@
+{
+  "title": "Kayıt Ol",
+  "uppercaseTitle": "KAYIT OL",
+  "code": "Etiketin üstündeki kodu giriniz",
+  "email": "E-Posta adresiniz",
+  "phone": "Telefon numaranız",
+  "secondMail": "İkincil e-posta adresi (isteğe bağlı)",
+  "password": "Şifre",
+  "rePassword": "Şifrenizi tekrar giriniz",
+  "send": "Gönder",
+  "acceptTerms": "Şartları kabul ediyorum",
+
+  "needTerms": "Kayıt olmak için şartları kabul etmeniz gerekmektedir.",
+  "invalidCode": "Geçersiz veya eksik kod.",
+  "invalidEmail": "Geçersiz e-posta adresi.",
+  "phoneError": "Lütfen geçerli bir telefon numarası girin.",
+  "passwordMatch": "Şifreler birbirleriyle eşleşmiyor.",
+  "tryAgainLater": "Bir hata meydana geldi, lütfen daha sonra tekrar deneyin.",
+  "alreadyRegisterEmail": "Bu e-posta adresi sisteme kayıtlı.",
+  "codeError": "Böyle bir kod oluşturulmamış, eğer hata olduğunu düşünüyorsan lütfen bizimle iletişime geç.",
+  "systemError": "Sistemde bir hata meydana geldi.",
+
+  "successRegister": "Başarıyla kaydolundu!",
+  "codeDescription": "Etiketin açıklaması"
+}

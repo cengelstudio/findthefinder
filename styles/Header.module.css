@@ -1,0 +1,444 @@
+.bigHeader {
+  background: linear-gradient(
+    135deg,
+    var(--theme-color) 0%,
+    var(--theme-color-dark) 100%
+  );
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bigHeader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.headerContent {
+  padding-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.languageSwitcher {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  grid-gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 9999;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation ul li {
+  position: relative;
+  float: left;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+.navigation ul li a {
+  display: block;
+  float: left;
+  height: 44px;
+  padding: 0 20px;
+  color: #ffffff;
+  line-height: 44px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-radius: var(--radius-lg);
+}
+
+.navigation ul li em {
+  position: absolute;
+  left: -3000em;
+  top: -3000em;
+}
+
+.navigation ul li:hover a {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.welcomeScreen {
+  display: flex;
+  padding: 0 30px 60px;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 120px;
+  max-height: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.welcomeScreenMotto {
+  max-width: 520px;
+  padding: 32px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: left;
+}
+
+.welcomeScreenMotto h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcomeScreenMotto h2 {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.bigTitle {
+  text-align: center;
+  padding: 140px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.bigTitle h1 {
+  font-size: 72px;
+  color: #ffffff;
+  font-weight: 700;
+  position: relative;
+  padding: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bigTitle h1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  margin: 0 0 0 -40px;
+  background: linear-gradient(90deg, var(--accent-color) 0%, #fbbf24 100%);
+  border-radius: 2px;
+}
+
+.navButton {
+  position: absolute;
+  top: 24px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.navButton svg {
+  fill: #fff;
+  height: 28px;
+  width: 28px;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+  .content {
+    max-width: 750px;
+    width: 100%;
+    padding: 12px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .welcomeScreenImage {
+    display: none;
+  }
+
+  .languageDropdown {
+    position: fixed;
+    top: 16px;
+    left: 20px;
+    right: auto !important;
+    z-index: 12000;
+    margin: 0;
+  }
+
+  .navButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .navButton:active {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(0.95);
+  }
+
+  .navButton svg {
+    fill: #fff;
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+  }
+
+  .navButton[aria-expanded='true'] svg {
+    transform: rotate(90deg) scale(1.1);
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 0;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    top: 90px;
+    right: 30px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+  }
+
+  .navigation[data-hide='false'] {
+    display: flex !important;
+    animation: slideDown 0.3s ease;
+  }
+
+  .navigation ul li {
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .navigation ul li:last-child {
+    border-bottom: none;
+  }
+
+  .navigation ul li a {
+    color: var(--text-primary) !important;
+    display: block;
+    float: left;
+    height: 44px;
+    padding: 0 24px;
+    line-height: 44px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+  }
+
+  .navigation ul li:hover a {
+    background: var(--theme-color) !important;
+    color: #fff !important;
+    transform: translateY(0);
+  }
+
+  .welcomeScreen {
+    margin: 60px 0;
+    padding: 0 20px 40px;
+    grid-gap: 0;
+  }
+
+  .welcomeScreenMotto {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .welcomeScreenMotto h1 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  .welcomeScreenMotto h2 {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .bigTitle {
+    padding: 100px 0;
+  }
+
+  .bigTitle h1 {
+    font-size: 48px;
+  }
+
+  .languageMenu {
+    left: 0 !important;
+    right: auto !important;
+    min-width: 200px;
+    transform: none;
+    animation: slideDown 0.3s ease;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.languageDropdown {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  z-index: 10000;
+}
+
+.languageButton {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 10px 18px 10px 12px;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.languageButton:hover,
+.languageButton:focus {
+  background: rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.flag {
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+.langName {
+  font-weight: 500;
+  margin-right: 2px;
+}
+
+.arrow {
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.languageButton[aria-expanded='true'] .arrow {
+  transform: rotate(180deg);
+}
+
+.languageMenu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  color: var(--text-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 180px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.3s ease;
+  overflow: hidden;
+}
+
+.languageOption {
+  padding: 12px 20px 12px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.languageOption:hover,
+.languageOption.active {
+  background: var(--theme-color);
+  color: #fff;
+  transform: translateX(4px);
+}

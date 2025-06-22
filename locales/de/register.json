@@ -1,0 +1,25 @@
+{
+  "title": "Registrieren",
+  "uppercaseTitle": "REGISTRIEREN",
+  "code": "Bitte geben Sie den Benutzercode auf dem Aufkleber ein",
+  "email": "E-Mail-Adresse",
+  "phone": "Telefonnummer",
+  "secondMail": "Zweite E-Mail-Adresse (optional)",
+  "password": "Passwort",
+  "rePassword": "Passwort bestätigen",
+  "send": "Senden",
+  "acceptTerms": "Ich akzeptiere die Bedingungen",
+
+  "needTerms": "Um sich zu registrieren, müssen Sie den Bedingungen zustimmen.",
+  "invalidCode": "Ungültiger oder fehlender Code.",
+  "invalidEmail": "Ungültige E-Mail-Adresse.",
+  "phoneError": "Bitte geben Sie eine gültige Telefonnummer ein.",
+  "passwordMatch": "Die Passwörter stimmen nicht überein.",
+  "tryAgainLater": "Ein Fehler ist aufgetreten, bitte versuchen Sie es später erneut.",
+  "alreadyRegisterEmail": "Diese E-Mail-Adresse ist bereits im System registriert.",
+  "codeError": "Ein solcher Code wurde nicht erstellt. Wenn Sie glauben, dass ein Fehler vorliegt, kontaktieren Sie uns bitte.",
+  "systemError": "Im System ist ein Fehler aufgetreten.",
+
+  "successRegister": "Erfolgreich registriert!",
+  "codeDescription": "Code-Beschreibung"
+}

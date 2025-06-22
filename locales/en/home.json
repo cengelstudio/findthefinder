@@ -1,0 +1,85 @@
+{
+  "description1": "It is a tool used to return to the owners of lost items.",
+  "description2": "How Does? Very simple.",
+
+  "bavulYazi": "IF YOU WISH, YOU CAN ENLARGE AND PRINT THE FIND THE FINDER LABELS BEFORE YOUR TRAVEL AND ADD THEM TO YOUR SUITCASES.",
+
+  "yaziEtiketElektronik": "USE YOUR LABELS TO REMEMBER YOUR ACCOUNT INFORMATION, SUCH AS PASSWORD, E-MAIL, ETC., REQUIRED FOR ACCESS TO ELECTRONIC DEVICES AND MOBILE APPLICATIONS, SO YOU WILL NOT REGRET IT LATER!",
+
+  "aniNot1": "PUT THE LABEL ON THE PLACE WHERE YOU STORE YOUR MEMORIES, NOTEBOOKS, PHOTO ALBUMS, ETC.!",
+  "aniNot2": "LOG IN TO YOUR ACCOUNT AND FIND WHAT YOU HAVE, WHERE AND WHERE, EASILY!",
+
+  "buySticker": {
+    "title": "Scan the QR Code on the Label and Sign Up",
+    "description": "Log in to the system when you want to add a new code."
+  },
+  "activeSticker": {
+    "title": "Attach the Label",
+    "description": "Attach the label to the item. (Phone, wallet, passport, etc.)"
+  },
+  "contactTheFinder": {
+    "title": "Find Your Item",
+    "description": "The person who scans the QR code on the label enters their contact information into the system, and this information is sent to your registered email address. This allows you to get in touch with the finder and secure the item."
+  },
+
+  "award": {
+    "title": "AWARD",
+    "description": "If the found item is returned to its owner, the finder will be included in the Find The Finder raffle program. Prizes are automatically sent to the e-mail addresses of the winners of the draws held periodically by the system."
+  },
+
+  "youCanFindSafe": {
+    "title": "Note to explain your password, e-mail account and similar information!",
+    "description": "When you need to remember your information, log in to your FIND The Finder account and see your grade now!"
+  },
+
+  "ftfTag": "Buy the Find The Finder item security tag now.",
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "q": "How can I activate my purchased tag?",
+      "a": "You can activate your purchased tag from the “register” section on our website."
+    },
+    "q3": {
+      "q": "How long is my tag valid for?",
+      "a": "Your tag is valid for 1 (One) YEAR from the moment you register in the system."
+    },
+    "q4": {
+      "q": "Do I pay another fee to the system?",
+      "a": "You do not pay any other fee to the system other than the tag fee."
+    },
+    "q5": {
+      "q": "I have more than one tag, do I have to register separately for each one?",
+      "a": "No. You can activate multiple tags with a user account."
+    },
+    "q6": {
+      "q": "Is it possible for me to completely end the registration I opened on www.findthefinder.com tith my tag?",
+      "a": "You can close the registration that you opened on www.findthefinder.com whenever you want."
+    },
+    "q7": {
+      "q": "I forgot my code with which I activated my tag. What do I need to do in this case?",
+      "a": "You can access your information via the link that we will send to your e-mail address that you provided during registration on www.findthefinder.com. "
+    },
+    "q8": {
+      "q": "My email address or sms number has changed, can I update the information on the system?",
+      "a": "You can update your information at any time with the help of your password that you have created on www.findthefinder.com."
+    },
+    "q9": {
+      "q": "I have lost my tagged item, can the person or organization who found it access my information?",
+      "a": "Contact information of the person or organization that found your tagged item will reach you through www.findthefinder.com."
+    },
+    "q10": {
+      "q": "Although I entered the code on my tag and sent my information to the system, I could not register, what is the problem?",
+      "a": "Fill out the contact form on www.findthefinder.com and we will contact you as soon as possible."
+    }
+  },
+
+  "contact": {
+    "title": "CONTACT US",
+    "name": "Your name",
+    "email": "E-mail address",
+    "phone": "Phone number",
+    "message": "Message",
+    "send": "Send"
+  }
+}
