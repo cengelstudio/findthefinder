@@ -9,8 +9,9 @@ import { useRouter } from 'next/router';
 
 export default function Header({ title, subtitle }: HeaderProps) {
   const router = useRouter();
-  const [showNav, setNav] = useState<boolean>(true);
+  const [showNav, setNav] = useState<boolean>(false);
   const [showLang, setShowLang] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const langRef = useRef<HTMLDivElement>(null);
 
   const { t, lang } = useTranslation('header');
@@ -31,7 +32,23 @@ export default function Header({ title, subtitle }: HeaderProps) {
 
   const currentLanguage = languages.find(lang => lang.code === getCurrentLocale());
 
+  // Ekran boyutunu kontrol et ve mobil durumu ayarla
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const mobile = window.innerWidth <= 850;
+      setIsMobile(mobile);
+      // Masaüstünde navigation her zaman açık, mobilde kapalı
+      setNav(!mobile);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
   // Dışarı tıklanınca ve ESC tuşuna basınca dil menüsünü kapat
+  // Mobilde navigation için de aynı işlevsellik
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (langRef.current && !langRef.current.contains(event.target as Node)) {
@@ -40,8 +57,13 @@ export default function Header({ title, subtitle }: HeaderProps) {
     }
 
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape' && showLang) {
-        setShowLang(false);
+      if (event.key === 'Escape') {
+        if (showLang) {
+          setShowLang(false);
+        }
+        if (isMobile && showNav) {
+          setNav(false);
+        }
       }
     }
 
@@ -51,7 +73,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [showLang]);
+  }, [showLang, showNav, isMobile]);
 
   const changeLanguage = (locale: string) => {
     setShowLang(false);
@@ -63,7 +85,17 @@ export default function Header({ title, subtitle }: HeaderProps) {
   };
 
   const toggleNavigation = () => {
-    setNav(!showNav);
+    // Sadece mobilde navigation toggle işlemi yap
+    if (isMobile) {
+      setNav(!showNav);
+    }
+  };
+
+  const closeNavigation = () => {
+    // Mobilde menu item'a tıklandığında navigation'ı kapat
+    if (isMobile) {
+      setNav(false);
+    }
   };
 
   const getMenuItems = () => {
@@ -171,7 +203,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
                   className={item.isSpecial ? styles.specialNavItem : ''}
                   style={item.active ? { background: 'var(--primary)' } : {}}
                 >
-                  <Link href={item.href}>{item.label}</Link>
+                  <Link href={item.href} onClick={closeNavigation}>{item.label}</Link>
                 </li>
               ))}
             </ul>
