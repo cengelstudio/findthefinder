@@ -1,10 +1,12 @@
 {
   "description": "Find The Finder, kayıp eşyaları sahiplerine güvenli ve hızlı bir şekilde ulaştırmak için kullanılan bir araçtır.",
+  "navigation": "Navigasyon",
   "product": "Ürün",
   "account": "Hesap",
   "support": "Destek",
   "home": "Ana Sayfa",
   "faq": "S.S.S.",
+  "contact": "İletişim",
   "warning": "Uyarı",
   "signIn": "Giriş Yap",
   "signUp": "Kayıt Ol",

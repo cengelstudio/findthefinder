@@ -1,17 +1,18 @@
 {
   "home": "Inicio",
   "faq": "FAQ",
+  "contact": "Contacto",
   "warning": "Advertencia",
-  "lostAndFound": "Objetos Perdidos",
-  "signIn": "Iniciar Sesión",
+  "lostAndFound": "Objetos perdidos",
+  "signIn": "Iniciar sesión",
   "signUp": "Registrarse",
   "getStarted": "Comenzar",
-  "learnMore": "Saber Más",
+  "learnMore": "Saber más",
   "nav": {
     "faq": "FAQ",
     "whatIsIt": "¿Qué es?",
     "contact": "Contacto",
-    "login": "Iniciar Sesión",
+    "login": "Iniciar sesión",
     "register": "Registrarse",
     "warning": "Advertencia",
     "iFound": "Encontré"

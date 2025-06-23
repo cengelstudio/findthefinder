@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SEO from '../components/SEO/SEO';
 import Image from 'next/image';
 import styles from '../styles/App.module.css';
 import Footer from '../components/Footer/Footer';
@@ -29,7 +30,7 @@ export default function Register() {
     if (key.length !== 0 && !key.includes('/signUp')) {
       setCode(key);
     }
-  }, []);
+  }, [router.asPath]);
 
   const sendForm = async () => {
     if (acceptTerms) {
@@ -87,35 +88,7 @@ export default function Register() {
 
   return (
     <>
-      <Head>
-        <title>Find The Finder</title>
-
-        <meta name="title" content="Find The Finder" />
-        <meta property="og:title" content="Find The Finder" />
-        <meta property="og:site_name" content="Find The Finder" />
-
-        <meta
-          name="description"
-          content="Find The Finder; Kaza, tehlike, doğal afet ve kişisel dalgınlık sonucu oluşan mal veya can kaybına karşı en hızlı şekilde ulaşmayı sağlayan bir araçtır."
-        />
-        <meta
-          name="og:description"
-          content="Find The Finder; Kaza, tehlike, doğal afet ve kişisel dalgınlık sonucu oluşan mal veya can kaybına karşı en hızlı şekilde ulaşmayı sağlayan bir araçtır."
-        />
-        <meta
-          name="twitter:description"
-          content="Find The Finder; Kaza, tehlike, doğal afet ve kişisel dalgınlık sonucu oluşan mal veya can kaybına karşı en hızlı şekilde ulaşmayı sağlayan bir araçtır."
-        />
-
-        <meta name="author" content="Find The Finder" />
-        <link rel="icon" href="./images/custom/logo.png" />
-
-        <meta property="og:type" content="website" />
-        <meta name="keywords" content="find,the,finder,lost,belongings" />
-        <meta name="robots" content="index, follow" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <SEO />
 
       <main>
         <Header title={t('title')} />

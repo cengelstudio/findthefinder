@@ -1,5 +1,6 @@
 export type HeaderProps = {
   title?: string;
+  subtitle?: string;
 };
 
 export type Code = {

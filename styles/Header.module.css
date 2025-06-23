@@ -295,6 +295,14 @@
   margin: 0;
 }
 
+.bigTitle h2 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin: var(--space-md) 0 0 0;
+  line-height: 1.4;
+}
+
 .navButton {
   display: none;
   width: 44px;

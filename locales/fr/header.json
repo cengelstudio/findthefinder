@@ -1,8 +1,9 @@
 {
   "home": "Accueil",
   "faq": "FAQ",
+  "contact": "Contact",
   "warning": "Avertissement",
-  "lostAndFound": "Objets Trouvés",
+  "lostAndFound": "Objets trouvés",
   "signIn": "Se connecter",
   "signUp": "S'inscrire",
   "getStarted": "Commencer",

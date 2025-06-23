@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Turkish (Default) URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr" />
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/sign_up" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en/sign_up" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de/sign_up" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr/sign_up" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es/sign_up" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it/sign_up" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru/sign_up" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr/sign_up" />
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/sign_in" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en/sign_in" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de/sign_in" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr/sign_in" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es/sign_in" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it/sign_in" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru/sign_in" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr/sign_in" />
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en/faq" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de/faq" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr/faq" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es/faq" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru/faq" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr/faq" />
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/lost_found" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en/lost_found" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de/lost_found" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr/lost_found" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es/lost_found" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it/lost_found" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru/lost_found" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr/lost_found" />
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/warning" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en/warning" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de/warning" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr/warning" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es/warning" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it/warning" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru/warning" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr/warning" />
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/account" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en/account" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de/account" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr/account" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es/account" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it/account" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru/account" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr/account" />
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.findthefinder.com/forgot_password" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.findthefinder.com/en/forgot_password" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.findthefinder.com/de/forgot_password" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.findthefinder.com/fr/forgot_password" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.findthefinder.com/es/forgot_password" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.findthefinder.com/it/forgot_password" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.findthefinder.com/ru/forgot_password" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.findthefinder.com/gr/forgot_password" />
+  </url>
+
+  <!-- English URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/en</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/en/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/en/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/en/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/en/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/en/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/en/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/en/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- German URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/de</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/de/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/de/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/de/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/de/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/de/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/de/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/de/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- French URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/fr</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/fr/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/fr/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/fr/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/fr/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/fr/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/fr/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/fr/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Spanish URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/es</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/es/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/es/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/es/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/es/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/es/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/es/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/es/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Italian URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/it</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/it/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/it/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/it/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/it/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/it/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/it/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/it/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Russian URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/ru</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/ru/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/ru/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/ru/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/ru/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/ru/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/ru/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/ru/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Greek URLs -->
+  <url>
+    <loc>https://www.findthefinder.com/gr</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.findthefinder.com/gr/sign_up</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/gr/sign_in</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/gr/faq</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/gr/lost_found</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/gr/warning</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/gr/account</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.findthefinder.com/gr/forgot_password</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

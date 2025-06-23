@@ -1,48 +1,48 @@
 {
   "description1": "It is a tool used to return to the owners of lost items.",
-  "description2": "How Does? Very simple.",
+  "description2": "How does it work? Very simple.",
 
   "bavulYazi": "If you wish, you can enlarge and print the Find The Finder labels before your travel and add them to your suitcases.",
 
-  "yaziEtiketElektronik": "Use your labels to remember your account information, such as password, e-mail, etc., required for access to electronic devices and mobile applications, so you will not regret it later!",
+  "yaziEtiketElektronik": "Use your labels to remember your account information, such as password, email, etc., required for access to electronic devices and mobile applications, so you will not regret it later!",
 
   "aniNot1": "Put the label on the place where you store your memories, notebooks, photo albums, etc.!",
   "aniNot2": "Log in to your account and find what you have, where and where, easily!",
 
   "buySticker": {
-    "title": "Scan the QR Code on the Label and Sign Up",
+    "title": "Scan the QR code on the label and sign up",
     "description": "Log in to the system when you want to add a new code."
   },
   "activeSticker": {
-    "title": "Attach the Label",
+    "title": "Attach the label",
     "description": "Attach the label to the item. (Phone, wallet, passport, etc.)"
   },
   "contactTheFinder": {
-    "title": "Find Your Item",
+    "title": "Find your item",
     "description": "The person who scans the QR code on the label enters their contact information into the system, and this information is sent to your registered email address. This allows you to get in touch with the finder and secure the item."
   },
 
   "award": {
     "title": "Award",
-    "description": "If the found item is returned to its owner, the finder will be included in the Find The Finder raffle program. Prizes are automatically sent to the e-mail addresses of the winners of the draws held periodically by the system."
+    "description": "If the found item is returned to its owner, the finder will be included in the Find The Finder raffle program. Prizes are automatically sent to the email addresses of the winners of the draws held periodically by the system."
   },
 
   "youCanFindSafe": {
-    "title": "Note to explain your password, e-mail account and similar information!",
-    "description": "When you need to remember your information, log in to your Find The Finder account and see your grade now!"
+    "title": "Note to explain your password, email account and similar information!",
+    "description": "When you need to remember your information, log in to your Find The Finder account and see your note now!"
   },
 
   "ftfTag": "Buy the Find The Finder item security tag now.",
 
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "Frequently asked questions",
     "q1": {
       "q": "How can I activate my purchased tag?",
-      "a": "You can activate your purchased tag from the “register” section on our website."
+      "a": "You can activate your purchased tag from the \"register\" section on our website."
     },
     "q3": {
       "q": "How long is my tag valid for?",
-      "a": "Your tag is valid for 1 (One) YEAR from the moment you register in the system."
+      "a": "Your tag is valid for 1 (one) year from the moment you register in the system."
     },
     "q4": {
       "q": "Do I pay another fee to the system?",
@@ -53,15 +53,15 @@
       "a": "No. You can activate multiple tags with a user account."
     },
     "q6": {
-      "q": "Is it possible for me to completely end the registration I opened on www.findthefinder.com tith my tag?",
+      "q": "Is it possible for me to completely end the registration I opened on www.findthefinder.com with my tag?",
       "a": "You can close the registration that you opened on www.findthefinder.com whenever you want."
     },
     "q7": {
       "q": "I forgot my code with which I activated my tag. What do I need to do in this case?",
-      "a": "You can access your information via the link that we will send to your e-mail address that you provided during registration on www.findthefinder.com. "
+      "a": "You can access your information via the link that we will send to your email address that you provided during registration on www.findthefinder.com."
     },
     "q8": {
-      "q": "My email address or sms number has changed, can I update the information on the system?",
+      "q": "My email address or SMS number has changed, can I update the information on the system?",
       "a": "You can update your information at any time with the help of your password that you have created on www.findthefinder.com."
     },
     "q9": {
@@ -75,9 +75,9 @@
   },
 
   "contact": {
-    "title": "Contact Us",
+    "title": "Contact us",
     "name": "Your name",
-    "email": "E-mail address",
+    "email": "Email address",
     "phone": "Phone number",
     "message": "Message",
     "send": "Send"

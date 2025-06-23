@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '../styles/App.module.css';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
+import SEO from '../components/SEO/SEO';
 import useTranslation from 'next-translate/useTranslation';
 import { useState } from 'react';
 import axios from 'axios';
@@ -35,35 +36,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Find The Finder</title>
-
-        <meta name="title" content="Find The Finder" />
-        <meta property="og:title" content="Find The Finder" />
-        <meta property="og:site_name" content="Find The Finder" />
-
-        <meta
-          name="description"
-          content="Find The Finder; Kaza, tehlike, doğal afet ve kişisel dalgınlık sonucu oluşan mal veya can kaybına karşı en hızlı şekilde ulaşmayı sağlayan bir araçtır."
-        />
-        <meta
-          name="og:description"
-          content="Find The Finder; Kaza, tehlike, doğal afet ve kişisel dalgınlık sonucu oluşan mal veya can kaybına karşı en hızlı şekilde ulaşmayı sağlayan bir araçtır."
-        />
-        <meta
-          name="twitter:description"
-          content="Find The Finder; Kaza, tehlike, doğal afet ve kişisel dalgınlık sonucu oluşan mal veya can kaybına karşı en hızlı şekilde ulaşmayı sağlayan bir araçtır."
-        />
-
-        <meta name="author" content="Find The Finder" />
-        <link rel="icon" href="./images/custom/logo.png" />
-
-        <meta property="og:type" content="website" />
-        <meta name="keywords" content="find,the,finder,lost,belongings" />
-        <meta name="robots" content="index, follow" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <SEO />
 
       <main>
         <Header />
@@ -138,7 +111,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.content}>
             <div className={styles.sectionBanner}>
-              <img src={'./images/bavuls.jpeg'} alt={''} />
+              <Image src={'/images/bavuls.jpeg'} alt={'Suitcase'} width={800} height={600} />
             </div>
             {/* <br />
                         <div className={styles.sectionTitle}>
@@ -160,7 +133,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.content}>
             <div className={styles.sectionBanner}>
-              <img src={'./images/custom/a56i49d.jpeg'} alt={''} />
+              <Image src={'/images/custom/a56i49d.jpeg'} alt={'Example image'} width={800} height={600} />
             </div>
           </div>
         </section>
@@ -183,7 +156,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.content}>
             <div className={styles.sectionBanner}>
-              <img src={'./images/odul.jpeg'} alt={''} />
+              <Image src={'/images/odul.jpeg'} alt={'Award'} width={800} height={600} />
             </div>
             <br />
             <div className={styles.sectionTitle}>
@@ -219,7 +192,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.content}>
             <div className={styles.sectionBanner}>
-              <img src={'./images/custom/aafbhaj.jpeg'} alt={''} />
+              <Image src={'/images/custom/aafbhaj.jpeg'} alt={'Example image'} width={800} height={600} />
             </div>
           </div>
         </section>
@@ -253,7 +226,7 @@ export default function Home() {
         <section className={styles.section}>
           <div className={styles.content}>
             <div className={styles.sectionBanner}>
-              <img src={'./images/custom/sclhryi.jpeg'} alt={''} />
+              <Image src={'/images/custom/sclhryi.jpeg'} alt={'Example image'} width={800} height={600} />
             </div>
           </div>
         </section>

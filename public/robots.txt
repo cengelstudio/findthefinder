@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.findthefinder.com/sitemap.xml
+
+# Block access to admin areas and API endpoints
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /node_modules/
+
+# Allow specific public assets
+Allow: /images/
+Allow: /fonts/
+Allow: /favicon.ico
+
+# Crawl delay (be gentle on the server)
+Crawl-delay: 1

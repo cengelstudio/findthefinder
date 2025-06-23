@@ -6,6 +6,14 @@ const nextConfig = nextTranslate({
   images: {
     domains: ['www.findthefinder.com'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap.xml'
+      }
+    ];
+  },
 });
 
 module.exports = nextConfig;

@@ -171,7 +171,7 @@ export default function Found() {
     } catch (e) {
       console.log(e);
     }
-  }, []);
+  }, [key, router, token]);
 
   return (
     <>

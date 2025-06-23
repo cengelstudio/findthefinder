@@ -1,6 +1,7 @@
 import styles1 from '../../styles/App.module.css';
 import styles from '../../styles/Footer.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import useTranslation from 'next-translate/useTranslation';
 
 export default function Footer() {
@@ -39,20 +40,20 @@ export default function Footer() {
             </div>
 
             <div className={styles.footerLinks}>
-              <h4>{t('product')}</h4>
+              <h4>{t('navigation')}</h4>
               <ul>
-                <li><a href="/">{t('home')}</a></li>
-                <li><a href="/faq">{t('faq')}</a></li>
-                <li><a href="/warning">{t('warning')}</a></li>
+                <li><Link href="/#faq">{t('faq')}</Link></li>
+                <li><Link href="/#contact">{t('contact')}</Link></li>
+                <li><Link href="/warning">{t('warning')}</Link></li>
+                <li><Link href="/lost_found">{t('lostAndFound')}</Link></li>
               </ul>
             </div>
 
             <div className={styles.footerLinks}>
               <h4>{t('account')}</h4>
               <ul>
-                <li><a href="/sign_in">{t('signIn')}</a></li>
-                <li><a href="/sign_up">{t('signUp')}</a></li>
-                <li><a href="/lost_found">{t('lostAndFound')}</a></li>
+                <li><Link href="/sign_in">{t('signIn')}</Link></li>
+                <li><Link href="/sign_up">{t('signUp')}</Link></li>
               </ul>
             </div>
 

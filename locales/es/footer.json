@@ -1,14 +1,16 @@
 {
-  "description": "Find The Finder es una herramienta utilizada para devolver objetos perdidos a sus propietarios de forma segura y rápida.",
+  "description": "Find The Finder es una herramienta utilizada para devolver objetos perdidos a sus propietarios de manera segura y rápida.",
+  "navigation": "Navegación",
   "product": "Producto",
   "account": "Cuenta",
   "support": "Soporte",
   "home": "Inicio",
   "faq": "FAQ",
+  "contact": "Contacto",
   "warning": "Advertencia",
-  "signIn": "Iniciar Sesión",
+  "signIn": "Iniciar sesión",
   "signUp": "Registrarse",
-  "lostAndFound": "Objetos Perdidos",
-  "allRightsReserved": "Todos los derechos reservados.",
+  "lostAndFound": "Objetos perdidos",
+  "allRightsReserved": "todos los derechos reservados.",
   "legacy": "Aviso legal"
 }

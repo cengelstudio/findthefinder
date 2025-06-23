@@ -7,7 +7,7 @@ import useTranslation from 'next-translate/useTranslation';
 import type { HeaderProps } from '../../types/components';
 import { useRouter } from 'next/router';
 
-export default function Header({ title }: HeaderProps) {
+export default function Header({ title, subtitle }: HeaderProps) {
   const router = useRouter();
   const [showNav, setNav] = useState<boolean>(true);
   const [showLang, setShowLang] = useState<boolean>(false);
@@ -182,7 +182,7 @@ export default function Header({ title }: HeaderProps) {
           <div className={styles.welcomeScreen}>
             <div className={styles.welcomeScreenMotto}>
               <h1>
-                {t('welcomeScreen.title')}
+                {t('welcomeScreen.title').toUpperCase()}
               </h1>
               <h2>{t('welcomeScreen.subtitle')}</h2>
               <div style={{ display: 'flex', gap: 'var(--space-lg)', marginTop: 'var(--space-2xl)' }}>
@@ -218,6 +218,7 @@ export default function Header({ title }: HeaderProps) {
         {title !== undefined && (
           <div className={styles.bigTitle}>
             <h1>{title}</h1>
+            {subtitle && <h2>{subtitle}</h2>}
           </div>
         )}
       </div>

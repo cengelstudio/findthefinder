@@ -1,6 +1,7 @@
 {
   "home": "Главная",
   "faq": "FAQ",
+  "contact": "Контакты",
   "warning": "Предупреждение",
   "lostAndFound": "Потерянные Вещи",
   "signIn": "Войти",
@@ -10,7 +11,7 @@
   "nav": {
     "faq": "FAQ",
     "whatIsIt": "Что это?",
-    "contact": "Контакт",
+    "contact": "Контакты",
     "login": "Войти",
     "register": "Регистрация",
     "warning": "Предупреждение",
