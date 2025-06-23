@@ -87,7 +87,7 @@ describe('Footer Component', () => {
     render(<Footer />);
 
     expect(screen.getByText(/© 2025 FindTheFinder/)).toBeInTheDocument();
-    expect(screen.getByText('allRightsReserved')).toBeInTheDocument();
+    expect(screen.getByText(/allRightsReserved/)).toBeInTheDocument();
   });
 
   it('renders legal links with correct attributes', () => {

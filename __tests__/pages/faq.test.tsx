@@ -1,4 +1,6 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import FAQ from '../../pages/faq';
 
 // Mock next-translate
@@ -32,7 +34,7 @@ jest.mock('../../components/Footer/Footer', () => {
 });
 
 describe('FAQ Page', () => {
-  it('renders FAQ page with all components', () => {
+  it('renders FAQ page correctly', () => {
     render(<FAQ />);
 
     expect(screen.getByTestId('seo-component')).toBeInTheDocument();
@@ -40,21 +42,18 @@ describe('FAQ Page', () => {
     expect(screen.getByTestId('footer-component')).toBeInTheDocument();
   });
 
-  it('displays FAQ title', () => {
+  it('displays FAQ content', () => {
     render(<FAQ />);
 
-    expect(screen.getByText('title')).toBeInTheDocument();
-  });
+    expect(screen.getByText('howToUse.title')).toBeInTheDocument();
 
-  it('displays FAQ description', () => {
-    render(<FAQ />);
-
-    expect(screen.getByText('description')).toBeInTheDocument();
-  });
-
-  it('displays coming soon message', () => {
-    render(<FAQ />);
-
-    expect(screen.getByText('comingSoon')).toBeInTheDocument();
+    // Check for the span that contains all descriptions
+    const descriptionsContainer = screen.getByText(/howToUse\.description1/);
+    expect(descriptionsContainer).toBeInTheDocument();
+    expect(descriptionsContainer).toHaveTextContent('howToUse.description1');
+    expect(descriptionsContainer).toHaveTextContent('howToUse.description2');
+    expect(descriptionsContainer).toHaveTextContent('howToUse.description3');
+    expect(descriptionsContainer).toHaveTextContent('howToUse.description4');
+    expect(descriptionsContainer).toHaveTextContent('howToUse.description5');
   });
 });

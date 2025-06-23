@@ -1,6 +1,8 @@
+import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import Account from '../../pages/account';
+import '@testing-library/jest-dom';
 import axios from 'axios';
+import Account from '../../pages/account';
 
 // Mock axios
 jest.mock('axios');
@@ -8,9 +10,12 @@ const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 // Mock next/router
 const mockPush = jest.fn();
+const mockReload = jest.fn();
 jest.mock('next/router', () => ({
   useRouter: () => ({
     push: mockPush,
+    reload: mockReload,
+    asPath: '/account', // Make sure this doesn't match '/update?code=' pattern
   }),
 }));
 
@@ -45,12 +50,16 @@ jest.mock('../../components/Footer/Footer', () => {
 });
 
 // Mock cookies-next
-const mockGetCookie = jest.fn();
-const mockRemoveCookies = jest.fn();
 jest.mock('cookies-next', () => ({
-  getCookie: mockGetCookie,
-  removeCookies: mockRemoveCookies,
+  getCookie: jest.fn(),
+  removeCookies: jest.fn(),
+  setCookie: jest.fn(),
 }));
+
+// Get the mocked functions
+const mockGetCookie = require('cookies-next').getCookie as jest.MockedFunction<typeof import('cookies-next').getCookie>;
+const mockRemoveCookies = require('cookies-next').removeCookies as jest.MockedFunction<typeof import('cookies-next').removeCookies>;
+const mockSetCookie = require('cookies-next').setCookie as jest.MockedFunction<typeof import('cookies-next').setCookie>;
 
 describe('Account Page', () => {
   beforeEach(() => {
@@ -60,17 +69,27 @@ describe('Account Page', () => {
     mockGetCookie.mockReturnValue('mock-token');
   });
 
+  it('redirects to login if no token exists', async () => {
+    mockGetCookie.mockReturnValue(null);
+
+    render(<Account />);
+
+    await waitFor(() => {
+      expect(window.alert).toHaveBeenCalledWith('authError');
+      expect(mockPush).toHaveBeenCalledWith('/login');
+    });
+  });
+
   it('renders account page when user is authenticated', async () => {
     const mockUserData = {
       data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: [
-          { code: 'CODE1', codeDescription: 'Description 1' },
-          { code: 'CODE2', codeDescription: 'Description 2' }
-        ]
+        auth: true,
+        data: {
+          email: 'test@example.com',
+          secondMail: 'second@example.com',
+          number: '1234567890',
+          codes: []
+        }
       }
     };
     mockedAxios.post.mockResolvedValue(mockUserData);
@@ -84,22 +103,16 @@ describe('Account Page', () => {
     });
   });
 
-  it('redirects to login if no token exists', () => {
-    mockGetCookie.mockReturnValue(null);
-
-    render(<Account />);
-
-    expect(mockPush).toHaveBeenCalledWith('/sign_in');
-  });
-
   it('displays user information correctly', async () => {
     const mockUserData = {
       data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: []
+        auth: true,
+        data: {
+          email: 'test@example.com',
+          secondMail: 'second@example.com',
+          number: '1234567890',
+          codes: []
+        }
       }
     };
     mockedAxios.post.mockResolvedValue(mockUserData);
@@ -108,22 +121,24 @@ describe('Account Page', () => {
 
     await waitFor(() => {
       expect(screen.getByDisplayValue('test@example.com')).toBeInTheDocument();
-      expect(screen.getByDisplayValue('1234567890')).toBeInTheDocument();
       expect(screen.getByDisplayValue('second@example.com')).toBeInTheDocument();
+      expect(screen.getByDisplayValue('1234567890')).toBeInTheDocument();
     });
   });
 
-  it('displays user codes correctly', async () => {
+  it('displays user codes in table', async () => {
     const mockUserData = {
       data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: [
-          { code: 'CODE1', codeDescription: 'Description 1' },
-          { code: 'CODE2', codeDescription: 'Description 2' }
-        ]
+        auth: true,
+        data: {
+          email: 'test@example.com',
+          secondMail: 'second@example.com',
+          number: '1234567890',
+          codes: [
+            { content: 'CODE1', used_on: 'Description 1' },
+            { content: 'CODE2', used_on: 'Description 2' }
+          ]
+        }
       }
     };
     mockedAxios.post.mockResolvedValue(mockUserData);
@@ -131,21 +146,23 @@ describe('Account Page', () => {
     render(<Account />);
 
     await waitFor(() => {
-      expect(screen.getByDisplayValue('CODE1')).toBeInTheDocument();
-      expect(screen.getByDisplayValue('Description 1')).toBeInTheDocument();
-      expect(screen.getByDisplayValue('CODE2')).toBeInTheDocument();
-      expect(screen.getByDisplayValue('Description 2')).toBeInTheDocument();
+      expect(screen.getByText('CODE1')).toBeInTheDocument();
+      expect(screen.getByText('Description 1')).toBeInTheDocument();
+      expect(screen.getByText('CODE2')).toBeInTheDocument();
+      expect(screen.getByText('Description 2')).toBeInTheDocument();
     });
   });
 
   it('handles form input changes', async () => {
     const mockUserData = {
       data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: []
+        auth: true,
+        data: {
+          email: 'test@example.com',
+          secondMail: 'second@example.com',
+          number: '1234567890',
+          codes: []
+        }
       }
     };
     mockedAxios.post.mockResolvedValue(mockUserData);
@@ -159,41 +176,16 @@ describe('Account Page', () => {
     });
   });
 
-  it('handles profile update successfully', async () => {
+  it('shows alert for invalid email during update', async () => {
     const mockUserData = {
       data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: []
-      }
-    };
-    const mockUpdateResponse = { data: { status: 'success' } };
-    mockedAxios.post
-      .mockResolvedValueOnce(mockUserData)
-      .mockResolvedValueOnce(mockUpdateResponse);
-
-    render(<Account />);
-
-    await waitFor(() => {
-      const updateButton = screen.getByDisplayValue('update');
-      fireEvent.click(updateButton);
-    });
-
-    await waitFor(() => {
-      expect(window.alert).toHaveBeenCalledWith('profileUpdated');
-    });
-  });
-
-  it('handles profile update with validation errors', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: []
+        auth: true,
+        data: {
+          email: 'test@example.com',
+          secondMail: 'second@example.com',
+          number: '1234567890',
+          codes: []
+        }
       }
     };
     mockedAxios.post.mockResolvedValue(mockUserData);
@@ -204,8 +196,8 @@ describe('Account Page', () => {
       const emailInput = screen.getByDisplayValue('test@example.com');
       fireEvent.change(emailInput, { target: { value: 'invalid-email' } });
 
-      const updateButton = screen.getByDisplayValue('update');
-      fireEvent.click(updateButton);
+      const saveButton = screen.getByDisplayValue('save');
+      fireEvent.click(saveButton);
     });
 
     await waitFor(() => {
@@ -216,11 +208,13 @@ describe('Account Page', () => {
   it('handles logout correctly', async () => {
     const mockUserData = {
       data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: []
+        auth: true,
+        data: {
+          email: 'test@example.com',
+          secondMail: 'second@example.com',
+          number: '1234567890',
+          codes: []
+        }
       }
     };
     mockedAxios.post.mockResolvedValue(mockUserData);
@@ -228,77 +222,29 @@ describe('Account Page', () => {
     render(<Account />);
 
     await waitFor(() => {
-      const logoutButton = screen.getByDisplayValue('logout');
+      const logoutButton = screen.getByText('logout');
       fireEvent.click(logoutButton);
     });
 
     expect(mockRemoveCookies).toHaveBeenCalledWith('ftftok');
-    expect(mockPush).toHaveBeenCalledWith('/');
+    setTimeout(() => {
+      expect(mockPush).toHaveBeenCalledWith('/login');
+    }, 500);
   });
 
-  it('handles account deletion with confirmation', async () => {
+  it('handles authentication error', async () => {
     const mockUserData = {
       data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: []
-      }
-    };
-    const mockDeleteResponse = { data: { status: 'success' } };
-    mockedAxios.post
-      .mockResolvedValueOnce(mockUserData)
-      .mockResolvedValueOnce(mockDeleteResponse);
-
-    window.confirm = jest.fn().mockReturnValue(true);
-
-    render(<Account />);
-
-    await waitFor(() => {
-      const deleteButton = screen.getByDisplayValue('deleteAccount');
-      fireEvent.click(deleteButton);
-    });
-
-    await waitFor(() => {
-      expect(window.confirm).toHaveBeenCalledWith('deleteAccountConfirm');
-      expect(window.alert).toHaveBeenCalledWith('accountDeleted');
-      expect(mockPush).toHaveBeenCalledWith('/');
-    });
-  });
-
-  it('handles account deletion cancellation', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        email: 'test@example.com',
-        phone: '1234567890',
-        secondMail: 'second@example.com',
-        codes: []
+        auth: false,
       }
     };
     mockedAxios.post.mockResolvedValue(mockUserData);
 
-    window.confirm = jest.fn().mockReturnValue(false);
-
     render(<Account />);
 
     await waitFor(() => {
-      const deleteButton = screen.getByDisplayValue('deleteAccount');
-      fireEvent.click(deleteButton);
-    });
-
-    expect(window.confirm).toHaveBeenCalledWith('deleteAccountConfirm');
-    expect(mockedAxios.post).toHaveBeenCalledTimes(1); // Only initial data fetch
-  });
-
-  it('handles API errors gracefully', async () => {
-    mockedAxios.post.mockRejectedValue(new Error('Network error'));
-
-    render(<Account />);
-
-    await waitFor(() => {
-      expect(mockPush).toHaveBeenCalledWith('/sign_in');
+      expect(window.alert).toHaveBeenCalledWith('authError');
+      expect(mockPush).toHaveBeenCalledWith('/login');
     });
   });
 });

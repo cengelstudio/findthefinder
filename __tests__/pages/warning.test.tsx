@@ -1,4 +1,6 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Warning from '../../pages/warning';
 
 // Mock next-translate
@@ -32,7 +34,7 @@ jest.mock('../../components/Footer/Footer', () => {
 });
 
 describe('Warning Page', () => {
-  it('renders warning page with all components', () => {
+  it('renders warning page correctly', () => {
     render(<Warning />);
 
     expect(screen.getByTestId('seo-component')).toBeInTheDocument();
@@ -40,15 +42,16 @@ describe('Warning Page', () => {
     expect(screen.getByTestId('footer-component')).toBeInTheDocument();
   });
 
-  it('displays warning title', () => {
+  it('displays warning title in header', () => {
     render(<Warning />);
 
-    expect(screen.getByText('title')).toBeInTheDocument();
+    expect(screen.getByTestId('header-component')).toHaveTextContent('title');
   });
 
   it('displays warning description', () => {
     render(<Warning />);
 
-    expect(screen.getByText('description')).toBeInTheDocument();
+    expect(screen.getByText('description1')).toBeInTheDocument();
+    expect(screen.getByText('description2')).toBeInTheDocument();
   });
 });

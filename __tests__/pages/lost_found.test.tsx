@@ -1,6 +1,8 @@
+import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import LostFound from '../../pages/lost_found';
+import '@testing-library/jest-dom';
 import axios from 'axios';
+import LostFound from '../../pages/lost_found';
 
 // Mock axios
 jest.mock('axios');
@@ -44,164 +46,177 @@ jest.mock('../../components/Footer/Footer', () => {
   };
 });
 
-// Mock cookies-next
-const mockGetCookie = jest.fn();
-jest.mock('cookies-next', () => ({
-  getCookie: mockGetCookie,
-}));
+// Mock geolocation
+const mockGeolocation = {
+  getCurrentPosition: jest.fn(),
+};
+Object.defineProperty(global.navigator, 'geolocation', {
+  value: mockGeolocation,
+  writable: true,
+});
 
-describe('LostFound Page', () => {
+describe('LostFound (Found Form) Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     window.alert = jest.fn();
-    mockGetCookie.mockReturnValue('mock-token');
+    mockGeolocation.getCurrentPosition.mockClear();
   });
 
-  it('renders lost found page when user is authenticated', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        codes: [
-          { code: 'CODE1', codeDescription: 'Description 1' }
-        ]
-      }
-    };
-    mockedAxios.post.mockResolvedValue(mockUserData);
-
+  it('renders found form page', () => {
     render(<LostFound />);
 
+    expect(screen.getByTestId('seo-component')).toBeInTheDocument();
+    expect(screen.getByTestId('header-component')).toBeInTheDocument();
+    expect(screen.getByTestId('footer-component')).toBeInTheDocument();
+  });
+
+  it('displays form elements correctly', () => {
+    render(<LostFound />);
+
+    expect(screen.getByPlaceholderText('codePlaceholder')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('emailPlaceholder')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('phonePlaceholder')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('addressPlaceholder')).toBeInTheDocument();
+    expect(screen.getByText('send')).toBeInTheDocument();
+  });
+
+  it('handles form input changes', () => {
+    render(<LostFound />);
+
+    const codeInput = screen.getByPlaceholderText('codePlaceholder');
+    const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+    const phoneInput = screen.getByPlaceholderText('phonePlaceholder');
+
+    fireEvent.change(codeInput, { target: { value: 'TEST123' } });
+    fireEvent.change(emailInput, { target: { value: 'finder@example.com' } });
+    fireEvent.change(phoneInput, { target: { value: '1234567890' } });
+
+    expect(codeInput).toHaveValue('TEST123');
+    expect(emailInput).toHaveValue('finder@example.com');
+    expect(phoneInput).toHaveValue('1234567890');
+  });
+
+  it('shows error when code is missing', async () => {
+    render(<LostFound />);
+
+    const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+    const submitButton = screen.getByText('send');
+
+    fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
+    fireEvent.click(submitButton);
+
     await waitFor(() => {
-      expect(screen.getByTestId('seo-component')).toBeInTheDocument();
-      expect(screen.getByTestId('header-component')).toBeInTheDocument();
-      expect(screen.getByTestId('footer-component')).toBeInTheDocument();
+      expect(screen.getByText('missingLabel')).toBeInTheDocument();
     });
   });
 
-  it('redirects to login if no token exists', () => {
-    mockGetCookie.mockReturnValue(null);
-
+  it('shows error for invalid email', async () => {
     render(<LostFound />);
 
-    expect(mockPush).toHaveBeenCalledWith('/sign_in');
-  });
+    const codeInput = screen.getByPlaceholderText('codePlaceholder');
+    const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+    const submitButton = screen.getByText('send');
 
-  it('displays user codes correctly', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        codes: [
-          { code: 'CODE1', codeDescription: 'Description 1' },
-          { code: 'CODE2', codeDescription: 'Description 2' }
-        ]
-      }
-    };
-    mockedAxios.post.mockResolvedValue(mockUserData);
-
-    render(<LostFound />);
+    fireEvent.change(codeInput, { target: { value: 'TEST123' } });
+    fireEvent.change(emailInput, { target: { value: 'invalid-email' } });
+    fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(screen.getByText('CODE1')).toBeInTheDocument();
-      expect(screen.getByText('Description 1')).toBeInTheDocument();
-      expect(screen.getByText('CODE2')).toBeInTheDocument();
-      expect(screen.getByText('Description 2')).toBeInTheDocument();
+      expect(screen.getByText('invalidEmail')).toBeInTheDocument();
     });
   });
 
-  it('displays form for generating new code', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        codes: []
-      }
-    };
-    mockedAxios.post.mockResolvedValue(mockUserData);
+  it('submits form successfully', async () => {
+    const mockResponse = { data: { status: true } };
+    mockedAxios.post.mockResolvedValue(mockResponse);
 
     render(<LostFound />);
 
-    await waitFor(() => {
-      expect(screen.getByPlaceholderText('codeDescription')).toBeInTheDocument();
-      expect(screen.getByDisplayValue('generateCode')).toBeInTheDocument();
-    });
-  });
+    const codeInput = screen.getByPlaceholderText('codePlaceholder');
+    const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+    const phoneInput = screen.getByPlaceholderText('phonePlaceholder');
+    const submitButton = screen.getByText('send');
 
-  it('handles code generation successfully', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        codes: []
-      }
-    };
-    const mockGenerateResponse = { data: { status: 'success', code: 'NEWCODE123' } };
-    mockedAxios.post
-      .mockResolvedValueOnce(mockUserData)
-      .mockResolvedValueOnce(mockGenerateResponse);
-
-    render(<LostFound />);
+    fireEvent.change(codeInput, { target: { value: 'TEST123' } });
+    fireEvent.change(emailInput, { target: { value: 'finder@example.com' } });
+    fireEvent.change(phoneInput, { target: { value: '1234567890' } });
+    fireEvent.click(submitButton);
 
     await waitFor(() => {
-      const descriptionInput = screen.getByPlaceholderText('codeDescription');
-      const generateButton = screen.getByDisplayValue('generateCode');
-
-      fireEvent.change(descriptionInput, { target: { value: 'New test description' } });
-      fireEvent.click(generateButton);
-    });
-
-    await waitFor(() => {
-      expect(mockedAxios.post).toHaveBeenCalledWith('/api/generate_code', {
-        codeDescription: 'New test description',
+      expect(mockedAxios.post).toHaveBeenCalledWith('/api/found', {
+        code: 'TEST123',
+        email: 'finder@example.com',
+        phone: '1234567890',
+        address: '',
+        lang: 'en',
       });
-      expect(window.alert).toHaveBeenCalledWith('codeGenerated: NEWCODE123');
+      expect(window.alert).toHaveBeenCalledWith('thanks');
     });
+
+    // Should redirect to home after success
+    setTimeout(() => {
+      expect(mockPush).toHaveBeenCalledWith('/');
+    }, 500);
   });
 
-  it('shows error for empty code description', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        codes: []
-      }
-    };
-    mockedAxios.post.mockResolvedValue(mockUserData);
+  it('handles API submission error', async () => {
+    const mockResponse = { data: { status: false } };
+    mockedAxios.post.mockResolvedValue(mockResponse);
 
     render(<LostFound />);
 
-    await waitFor(() => {
-      const generateButton = screen.getByDisplayValue('generateCode');
-      fireEvent.click(generateButton);
-    });
+    const codeInput = screen.getByPlaceholderText('codePlaceholder');
+    const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+    const submitButton = screen.getByText('send');
+
+    fireEvent.change(codeInput, { target: { value: 'TEST123' } });
+    fireEvent.change(emailInput, { target: { value: 'finder@example.com' } });
+    fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(window.alert).toHaveBeenCalledWith('descriptionRequired');
+      expect(window.alert).toHaveBeenCalledWith('anError');
     });
   });
 
-  it('handles API error gracefully', async () => {
+  it('handles network error gracefully', async () => {
     mockedAxios.post.mockRejectedValue(new Error('Network error'));
 
     render(<LostFound />);
 
+    const codeInput = screen.getByPlaceholderText('codePlaceholder');
+    const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+    const submitButton = screen.getByText('send');
+
+    fireEvent.change(codeInput, { target: { value: 'TEST123' } });
+    fireEvent.change(emailInput, { target: { value: 'finder@example.com' } });
+    fireEvent.click(submitButton);
+
     await waitFor(() => {
-      expect(mockPush).toHaveBeenCalledWith('/sign_in');
+      expect(window.alert).toHaveBeenCalledWith('anError');
     });
   });
 
-  it('displays QR code for each user code', async () => {
-    const mockUserData = {
-      data: {
-        status: 'success',
-        codes: [
-          { code: 'CODE1', codeDescription: 'Description 1' }
-        ]
-      }
+  it('handles geolocation if available', () => {
+    const mockPosition = {
+      coords: {
+        latitude: 40.7128,
+        longitude: -74.0060,
+      },
     };
-    mockedAxios.post.mockResolvedValue(mockUserData);
+
+    // Mock fetch for reverse geocoding
+    global.fetch = jest.fn().mockResolvedValue({
+      json: jest.fn().mockResolvedValue({
+        display_name: 'New York, NY, USA',
+      }),
+    });
+
+    mockGeolocation.getCurrentPosition.mockImplementation((success) => {
+      success(mockPosition);
+    });
 
     render(<LostFound />);
 
-    await waitFor(() => {
-      // Check if QR code container is present
-      const qrCodeElement = screen.getByText(/lost_found\/CODE1/);
-      expect(qrCodeElement).toBeInTheDocument();
-    });
+    expect(mockGeolocation.getCurrentPosition).toHaveBeenCalled();
   });
 });

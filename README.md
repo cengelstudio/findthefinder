@@ -1,83 +1,83 @@
-# FindTheFinder Next.js Application
+# Find The Finder
 
-Bu proje, kayıp eşya bulma platformu için optimize edilmiş Next.js uygulamasıdır.
+An optimized Next.js application for the lost and found item platform.
 
-## 🚀 Proje Yapısı
+## 🚀 Project Structure
 
 ```
 nextapp/
-├── components/         # React bileşenleri
-│   ├── Header/        # Header bileşeni
-│   └── Footer/        # Footer bileşeni
-├── pages/             # Next.js sayfaları
-│   ├── api/           # API endpoint'leri
-│   │   └── users/     # Kullanıcı API'leri
-│   └── lost_found/    # Kayıp/Bulunan sayfaları
-├── lib/               # Yardımcı fonksiyonlar
-├── types/             # TypeScript tip tanımları
-├── styles/            # CSS modülleri
-├── locales/           # Çoklu dil dosyaları
-├── __tests__/         # Test dosyaları
-├── public/            # Statik dosyalar
-├── prisma/            # Veritabanı şeması
+├── components/         # React components
+│   ├── Header/        # Header component
+│   └── Footer/        # Footer component
+├── pages/             # Next.js pages
+│   ├── api/           # API endpoints
+│   │   └── users/     # User APIs
+│   └── lost_found/    # Lost/Found pages
+├── lib/               # Utility functions
+├── types/             # TypeScript type definitions
+├── styles/            # CSS modules
+├── locales/           # Multi-language files
+├── __tests__/         # Test files
+├── public/            # Static files
+├── prisma/            # Database schema
 └── .github/           # CI/CD workflows
 ```
 
-## 🛠️ Teknolojiler
+## 🛠️ Technologies
 
 - **Next.js 13.1.1** - React framework
-- **TypeScript 4.9.4** - Tip güvenliği
-- **Prisma 4.8.1** - Veritabanı ORM
-- **i18next** - Çoklu dil desteği
-- **Jest & Testing Library** - Test framework
-- **Prettier** - Kod formatlaması
-- **ESLint** - Kod kalitesi
+- **TypeScript 4.9.4** - Type safety
+- **Prisma 4.8.1** - Database ORM
+- **i18next** - Multi-language support
+- **Jest & Testing Library** - Testing framework
+- **Prettier** - Code formatting
+- **ESLint** - Code quality
 - **Husky** - Git hooks
 - **Docker** - Containerization
-- **Nodemailer** - E-posta gönderimi
-- **Twilio** - SMS gönderimi
+- **Nodemailer** - Email delivery
+- **Twilio** - SMS delivery
 
-## 📦 Kurulum
+## 📦 Installation
 
-1. Bağımlılıkları yükleyin:
+1. Install dependencies:
 
 ```bash
 npm install
-# veya
+# or
 yarn install
 ```
 
-2. Environment değişkenlerini ayarlayın:
+2. Setup environment variables:
 
 ```bash
 cp env.example .env.local
-# .env.local dosyasını düzenleyin
+# Edit .env.local file
 ```
 
-3. Veritabanını hazırlayın:
+3. Setup database:
 
 ```bash
 npx prisma generate
 npx prisma db push
 ```
 
-4. Husky'yi kurun:
+4. Install Husky:
 
 ```bash
 npm run prepare
 ```
 
-5. Geliştirme sunucusunu başlatın:
+5. Start development server:
 
 ```bash
 npm run dev
-# veya
+# or
 yarn dev
 ```
 
-## 🔧 Geliştirme
+## 🔧 Development
 
-### Kod Kalitesi
+### Code Quality
 
 ```bash
 # Linting
@@ -99,11 +99,11 @@ npm run test:coverage
 
 ### Git Hooks
 
-Proje, commit öncesi otomatik kod kontrolü için Husky kullanır:
+The project uses Husky for automatic code quality checks before commits:
 
-- ESLint kontrolü
-- Prettier formatlaması
-- TypeScript tip kontrolü
+- ESLint validation
+- Prettier formatting
+- TypeScript type checking
 
 ### Docker
 
@@ -115,9 +115,9 @@ docker build -t findthefinder .
 docker run -p 3000:3000 findthefinder
 ```
 
-## 🌐 Çoklu Dil Desteği
+## 🌐 Multi-Language Support
 
-Desteklenen diller:
+Supported languages:
 
 - 🇹🇷 Türkçe (tr)
 - 🇬🇧 English (en)
@@ -130,55 +130,56 @@ Desteklenen diller:
 
 ## 📝 API Endpoints
 
-### Kullanıcı İşlemleri
+### User Operations
 
-- `POST /api/users/sign_up` - Kayıt olma
-- `POST /api/users/login` - Giriş yapma
-- `POST /api/users/forgot_password` - Şifre sıfırlama
-- `GET /api/users/session` - Oturum kontrolü
-- `PUT /api/users/update` - Profil güncelleme
-- `DELETE /api/users/delete` - Hesap silme
+- `POST /api/users/sign_up` - User registration
+- `POST /api/users/login` - User login
+- `POST /api/users/forgot_password` - Password reset
+- `GET /api/users/session` - Session validation
+- `PUT /api/users/update` - Profile update
+- `DELETE /api/users/delete` - Account deletion
 
-### Kayıp/Bulunan İşlemleri
+### Lost/Found Operations
 
-- `POST /api/found` - Eşya bulundu bildirimi
-- `POST /api/send_message` - Mesaj gönderme
-- `GET /api/label_control` - Etiket kontrolü
+- `POST /api/found` - Item found notification
+- `POST /api/send_message` - Send message
+- `GET /api/label_control` - Label validation
 
-## 🧪 Test
+## 🧪 Testing
 
 ```bash
-# Tüm testleri çalıştır
+# Run all tests
 npm test
 
 # Watch mode
 npm run test:watch
 
-# Coverage raporu
+# Coverage report
 npm run test:coverage
 ```
 
 ## 🚀 Production
 
-Build almak için:
+To build for production:
 
 ```bash
 npm run build
 npm start
 ```
 
-Docker ile:
+With Docker:
 
 ```bash
 docker build -t findthefinder .
 docker run -p 3000:3000 findthefinder
 ```
 
-## 🔧 Geliştirici Araçları
+## �� Developer Tools
 
-- **Prettier**: Kod formatlaması
-- **ESLint**: Kod kalitesi kontrolü
+- **Prettier**: Code formatting
+- **ESLint**: Code quality control
 - **Husky**: Git hooks
-- **Jest**: Test framework
+- **Jest**: Testing framework
 - **Docker**: Containerization
 - **GitHub Actions**: CI/CD pipeline
+- **Dependabot**: Automated dependency updates

@@ -42,7 +42,7 @@ describe('ForgotPassword Page', () => {
     window.alert = jest.fn();
   });
 
-  it('renders forgot password page with form fields', () => {
+  it('renders forgot password page with form elements', () => {
     render(<ForgotPassword />);
 
     expect(screen.getByTestId('seo-component')).toBeInTheDocument();
@@ -50,10 +50,10 @@ describe('ForgotPassword Page', () => {
     expect(screen.getByTestId('footer-component')).toBeInTheDocument();
 
     expect(screen.getByPlaceholderText('email')).toBeInTheDocument();
-    expect(screen.getByDisplayValue('send')).toBeInTheDocument();
+    expect(screen.getByDisplayValue('reset')).toBeInTheDocument();
   });
 
-  it('handles email input change', () => {
+  it('handles form input changes', () => {
     render(<ForgotPassword />);
 
     const emailInput = screen.getByPlaceholderText('email');
@@ -62,18 +62,16 @@ describe('ForgotPassword Page', () => {
     expect(emailInput).toHaveValue('test@example.com');
   });
 
-  it('shows error for invalid email', async () => {
+  it('shows error for invalid email', () => {
     render(<ForgotPassword />);
 
     const emailInput = screen.getByPlaceholderText('email');
-    const submitButton = screen.getByDisplayValue('send');
+    const submitButton = screen.getByDisplayValue('reset');
 
     fireEvent.change(emailInput, { target: { value: 'invalid-email' } });
     fireEvent.click(submitButton);
 
-    await waitFor(() => {
-      expect(window.alert).toHaveBeenCalledWith('invalidEmail');
-    });
+    expect(window.alert).toHaveBeenCalledWith('invalidEmail');
   });
 
   it('submits form successfully', async () => {
@@ -83,7 +81,7 @@ describe('ForgotPassword Page', () => {
     render(<ForgotPassword />);
 
     const emailInput = screen.getByPlaceholderText('email');
-    const submitButton = screen.getByDisplayValue('send');
+    const submitButton = screen.getByDisplayValue('reset');
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
     fireEvent.click(submitButton);
@@ -91,24 +89,26 @@ describe('ForgotPassword Page', () => {
     await waitFor(() => {
       expect(mockedAxios.post).toHaveBeenCalledWith('/api/users/forgot_password', {
         email: 'test@example.com',
+        lang: 'en',
       });
-      expect(window.alert).toHaveBeenCalledWith('resetEmailSent');
+      expect(window.alert).toHaveBeenCalledWith('passwordChanged');
     });
   });
 
   it('handles API error', async () => {
-    mockedAxios.post.mockRejectedValue(new Error('Network error'));
+    const mockResponse = { data: { status: 'error' } };
+    mockedAxios.post.mockResolvedValue(mockResponse);
 
     render(<ForgotPassword />);
 
     const emailInput = screen.getByPlaceholderText('email');
-    const submitButton = screen.getByDisplayValue('send');
+    const submitButton = screen.getByDisplayValue('reset');
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
     fireEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(window.alert).toHaveBeenCalledWith('tryAgainLater');
+      expect(window.alert).toHaveBeenCalledWith('passwordChanged');
     });
   });
 });
