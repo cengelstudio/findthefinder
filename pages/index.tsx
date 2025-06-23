@@ -147,7 +147,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.sectionPhone}>
+        <section className={`${styles.sectionPhone} ${styles.sectionPhoneLast}`}>
           <div className={styles.content}>
             <div className={styles.sectionPhoneContent}>
               <div className={styles.sectionPhoneTitle}>
@@ -165,7 +165,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.sectionPhone}>
+        <section className={`${styles.sectionPhone} ${styles.sectionPhoneLast}`}>
           <div className={styles.content}>
             <div className={styles.sectionPhoneContent}>
               <div className={styles.sectionPhoneTitle}>

@@ -41,11 +41,14 @@
 .bigHeader:has(.bigTitle) .headerContent a,
 .bigHeader:has(.bigTitle) .headerContent .navigation ul li a {
   color: white;
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .bigHeader:has(.bigTitle) .headerContent .navigation ul li a:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
 }
 
 .bigHeader:has(.bigTitle) .headerContent .languageButton {
@@ -166,28 +169,32 @@
 .navigation {
   display: flex;
   align-items: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .navigation ul {
   display: flex;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
+  align-items: center;
 }
 
 .navigation ul li a {
   display: block;
-  padding: var(--space-md) var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
   color: var(--text-primary);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   transition: var(--transition);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   position: relative;
+  border: 1px solid transparent;
 }
 
 .navigation ul li a:hover {
   color: var(--primary);
-  background: var(--bg-light);
+  background: rgba(255, 84, 84, 0.08);
+  border-color: rgba(255, 84, 84, 0.2);
+  transform: translateY(-1px);
 }
 
 .navigation ul li[style*="background: var(--primary)"] a {
@@ -200,28 +207,33 @@
   background: var(--primary) !important;
   color: white !important;
   font-weight: 600;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transform: scale(1);
-  transition: all var(--transition);
+  border-radius: var(--radius-lg) !important;
+  box-shadow: 0 2px 8px rgba(255, 84, 84, 0.25) !important;
+  border: 1px solid var(--primary) !important;
+  padding: var(--space-sm) var(--space-lg) !important;
+  font-size: 14px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .specialNavItem a:hover {
   background: var(--primary-dark) !important;
   color: white !important;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-primary);
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 16px rgba(255, 84, 84, 0.35) !important;
+  border-color: var(--primary-dark) !important;
 }
 
 .bigHeader:has(.bigTitle) .headerContent .specialNavItem a {
   background: rgba(255, 255, 255, 0.2) !important;
   color: white !important;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .bigHeader:has(.bigTitle) .headerContent .specialNavItem a:hover {
   background: rgba(255, 255, 255, 0.3) !important;
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
 }
 
 .welcomeScreen {
@@ -369,13 +381,17 @@
   }
 
   .navigation ul li a {
-    padding: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
     border-bottom: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-xs);
+    border: 1px solid var(--border-light);
   }
 
   .bigHeader:has(.bigTitle) .navigation ul li a {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
+    margin-bottom: var(--space-xs);
   }
 
   .navigation ul li:last-child a {
@@ -383,12 +399,16 @@
   }
 
   .navigation ul li:hover a {
-    background: var(--primary);
-    color: white;
+    background: rgba(255, 84, 84, 0.08);
+    color: var(--primary);
+    border-color: rgba(255, 84, 84, 0.2);
+    transform: none;
   }
 
   .bigHeader:has(.bigTitle) .navigation ul li:hover a {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   /* Mobile special button styling */

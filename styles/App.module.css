@@ -81,7 +81,19 @@
   position: relative;
 }
 
-.sectionTitle h3::after,
+.sectionTitle h3::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Only show red line under phone title if there's content after */
 .sectionPhoneTitle h3::after {
   content: '';
   position: absolute;
@@ -92,6 +104,15 @@
   height: 3px;
   background: var(--primary);
   border-radius: 2px;
+}
+
+/* Hide red line for last phone section */
+.sectionPhoneLast .sectionPhoneTitle h3::after {
+  display: none;
+}
+
+.sectionPhoneLast {
+  /* Additional styling for last phone section if needed */
 }
 
 .sectionTitle span {
