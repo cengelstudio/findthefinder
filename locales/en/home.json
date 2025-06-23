@@ -2,12 +2,12 @@
   "description1": "It is a tool used to return to the owners of lost items.",
   "description2": "How Does? Very simple.",
 
-  "bavulYazi": "IF YOU WISH, YOU CAN ENLARGE AND PRINT THE FIND THE FINDER LABELS BEFORE YOUR TRAVEL AND ADD THEM TO YOUR SUITCASES.",
+  "bavulYazi": "If you wish, you can enlarge and print the Find The Finder labels before your travel and add them to your suitcases.",
 
-  "yaziEtiketElektronik": "USE YOUR LABELS TO REMEMBER YOUR ACCOUNT INFORMATION, SUCH AS PASSWORD, E-MAIL, ETC., REQUIRED FOR ACCESS TO ELECTRONIC DEVICES AND MOBILE APPLICATIONS, SO YOU WILL NOT REGRET IT LATER!",
+  "yaziEtiketElektronik": "Use your labels to remember your account information, such as password, e-mail, etc., required for access to electronic devices and mobile applications, so you will not regret it later!",
 
-  "aniNot1": "PUT THE LABEL ON THE PLACE WHERE YOU STORE YOUR MEMORIES, NOTEBOOKS, PHOTO ALBUMS, ETC.!",
-  "aniNot2": "LOG IN TO YOUR ACCOUNT AND FIND WHAT YOU HAVE, WHERE AND WHERE, EASILY!",
+  "aniNot1": "Put the label on the place where you store your memories, notebooks, photo albums, etc.!",
+  "aniNot2": "Log in to your account and find what you have, where and where, easily!",
 
   "buySticker": {
     "title": "Scan the QR Code on the Label and Sign Up",
@@ -23,13 +23,13 @@
   },
 
   "award": {
-    "title": "AWARD",
+    "title": "Award",
     "description": "If the found item is returned to its owner, the finder will be included in the Find The Finder raffle program. Prizes are automatically sent to the e-mail addresses of the winners of the draws held periodically by the system."
   },
 
   "youCanFindSafe": {
     "title": "Note to explain your password, e-mail account and similar information!",
-    "description": "When you need to remember your information, log in to your FIND The Finder account and see your grade now!"
+    "description": "When you need to remember your information, log in to your Find The Finder account and see your grade now!"
   },
 
   "ftfTag": "Buy the Find The Finder item security tag now.",
@@ -75,7 +75,7 @@
   },
 
   "contact": {
-    "title": "CONTACT US",
+    "title": "Contact Us",
     "name": "Your name",
     "email": "E-mail address",
     "phone": "Phone number",

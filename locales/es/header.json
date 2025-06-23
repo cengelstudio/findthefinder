@@ -1,15 +1,23 @@
 {
+  "home": "Inicio",
+  "faq": "FAQ",
+  "warning": "Advertencia",
+  "lostAndFound": "Objetos Perdidos",
+  "signIn": "Iniciar Sesión",
+  "signUp": "Registrarse",
+  "getStarted": "Comenzar",
+  "learnMore": "Saber Más",
   "nav": {
-    "faq": "P.F.",
+    "faq": "FAQ",
     "whatIsIt": "¿Qué es?",
     "contact": "Contacto",
-    "login": "Iniciar sesión",
+    "login": "Iniciar Sesión",
     "register": "Registrarse",
     "warning": "Advertencia",
-    "iFound": "He encontrado"
+    "iFound": "Encontré"
   },
   "welcomeScreen": {
     "title": "objetos perdidos",
-    "subtitle": "¡Deja de desaparecer y perder!"
+    "subtitle": "¡Deja de perder tus cosas!"
   }
 }

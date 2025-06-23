@@ -1,4 +1,13 @@
 {
+  "home": "Home",
+  "faq": "FAQ",
+  "warning": "Warning",
+  "lostAndFound": "Lost & Found",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "getStarted": "Get Started",
+  "learnMore": "Learn More",
+  "contact": "Contact",
   "nav": {
     "faq": "F.A.Q.",
     "whatIsIt": "What is it?",

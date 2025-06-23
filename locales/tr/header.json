@@ -1,4 +1,13 @@
 {
+  "home": "Ana Sayfa",
+  "faq": "S.S.S.",
+  "warning": "Uyarı",
+  "lostAndFound": "Kayıp Eşya",
+  "signIn": "Giriş Yap",
+  "signUp": "Kayıt Ol",
+  "getStarted": "Başlayın",
+  "learnMore": "Daha Fazla Bilgi",
+  "contact": "İletişim",
   "nav": {
     "faq": "S.S.S.",
     "whatIsIt": "Nedir?",

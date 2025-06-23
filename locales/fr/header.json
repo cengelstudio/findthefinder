@@ -1,15 +1,23 @@
 {
+  "home": "Accueil",
+  "faq": "FAQ",
+  "warning": "Avertissement",
+  "lostAndFound": "Objets Trouvés",
+  "signIn": "Se connecter",
+  "signUp": "S'inscrire",
+  "getStarted": "Commencer",
+  "learnMore": "En savoir plus",
   "nav": {
     "faq": "FAQ",
-    "whatIsIt": "Qu'est-ce que c'est",
-    "contact": "Nous Contacter",
+    "whatIsIt": "Qu'est-ce que c'est?",
+    "contact": "Contact",
     "login": "Connexion",
     "register": "S'inscrire",
-    "warning": "Attention",
-    "iFound": "J'ai Trouvé"
+    "warning": "Avertissement",
+    "iFound": "J'ai trouvé"
   },
   "welcomeScreen": {
-    "title": "PERDU ET TROUVÉ",
-    "subtitle": "Plus besoin de se perdre et de perdre!"
+    "title": "objets trouvés",
+    "subtitle": "Arrêtez de perdre vos affaires!"
   }
 }

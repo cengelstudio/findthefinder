@@ -1,4 +1,14 @@
 {
+  "description": "Find The Finder is a tool used to return lost items to their owners safely and quickly.",
+  "product": "Product",
+  "account": "Account",
+  "support": "Support",
+  "home": "Home",
+  "faq": "FAQ",
+  "warning": "Warning",
+  "signIn": "Sign In",
+  "signUp": "Sign Up",
+  "lostAndFound": "Lost & Found",
   "allRightsReserved": "all rights reserved.",
   "legacy": "Legal notice"
 }

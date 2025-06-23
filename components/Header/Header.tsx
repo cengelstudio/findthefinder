@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import type { HeaderProps } from '../../types/components';
+import { useRouter } from 'next/router';
 
 export default function Header({ title }: HeaderProps) {
+  const router = useRouter();
   const [showNav, setNav] = useState<boolean>(true);
   const [showLang, setShowLang] = useState<boolean>(false);
   const langRef = useRef<HTMLDivElement>(null);
@@ -14,31 +16,77 @@ export default function Header({ title }: HeaderProps) {
   const { t, lang } = useTranslation('header');
   const whyLang = useTranslation('why');
 
-  // Dışarı tıklanınca dil menüsünü kapat
+  const getCurrentLocale = () => router.locale || 'tr';
+
+  const languages = [
+    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+    { code: 'gr', name: 'Ελληνικά', flag: '🇬🇷' }
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === getCurrentLocale());
+
+  // Dışarı tıklanınca ve ESC tuşuna basınca dil menüsünü kapat
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (langRef.current && !langRef.current.contains(event.target as Node)) {
         setShowLang(false);
       }
     }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape' && showLang) {
+        setShowLang(false);
+      }
+    }
+
     document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [showLang]);
 
-  const languages = [
-    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
-    { code: 'en', name: 'English', flag: '🇬🇧' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'ru', name: 'Русский', flag: '🇷🇺' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'gr', name: 'Ελληνικά', flag: '🇬🇷' },
-  ];
+  const changeLanguage = (locale: string) => {
+    setShowLang(false);
+    router.push(router.asPath, router.asPath, { locale });
+  };
 
-  const currentLang = languages.find(l => l.code === lang) || languages[0];
+  const toggleLanguageMenu = () => {
+    setShowLang(!showLang);
+  };
+
+  const toggleNavigation = () => {
+    setNav(!showNav);
+  };
+
+  const getMenuItems = () => {
+    if (title === undefined) {
+      return [
+        { href: '/#faq', label: t('faq'), active: false, isSpecial: false },
+        { href: '/#contact', label: t('contact'), active: false, isSpecial: false },
+        { href: '/sign_in', label: t('signIn'), active: false, isSpecial: false },
+        { href: '/sign_up', label: t('signUp'), active: false, isSpecial: false },
+        { href: '/warning', label: t('warning'), active: false, isSpecial: false },
+        { href: '/lost_found', label: t('nav.iFound'), active: false, isSpecial: true }
+      ];
+    } else {
+      return [
+        { href: '/#faq', label: t('faq'), active: false, isSpecial: false },
+        { href: '/#contact', label: t('contact'), active: false, isSpecial: false },
+        { href: '/sign_in', label: t('signIn'), active: false, isSpecial: false },
+        { href: '/sign_up', label: t('signUp'), active: false, isSpecial: false },
+        { href: '/warning', label: t('warning'), active: false, isSpecial: false },
+        { href: '/lost_found', label: t('nav.iFound'), active: false, isSpecial: true }
+      ];
+    }
+  };
 
   return (
     <header className={styles.bigHeader}>
@@ -46,34 +94,26 @@ export default function Header({ title }: HeaderProps) {
       <div className={styles.languageDropdown} ref={langRef}>
         <button
           className={styles.languageButton}
-          onClick={() => setShowLang(!showLang)}
-          aria-label="Dili değiştir"
+          onClick={toggleLanguageMenu}
+          aria-expanded={showLang}
+          aria-haspopup="true"
         >
-          <span className={styles.flag}>{currentLang.flag}</span>
-          <span className={styles.langName}>{currentLang.name}</span>
-          <svg
-            className={styles.arrow}
-            width="12"
-            height="8"
-            viewBox="0 0 12 8"
-          >
-            <path d="M1 1l5 5 5-5" stroke="#fff" strokeWidth="2" fill="none" />
-          </svg>
+          <span className={styles.flag}>{currentLanguage?.flag}</span>
+          <span className={styles.langName}>{currentLanguage?.name}</span>
+          <span className={styles.arrow}>▼</span>
         </button>
         {showLang && (
           <div className={styles.languageMenu}>
-            {languages.map(l => (
-              <a
-                key={l.code}
-                href={`/${l.code}`}
-                className={
-                  styles.languageOption +
-                  (l.code === lang ? ' ' + styles.active : '')
-                }
-                onClick={() => setShowLang(false)}
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                onClick={() => changeLanguage(language.code)}
+                className={`${styles.languageOption} ${getCurrentLocale() === language.code ? styles.active : ''}`}
+                type="button"
               >
-                <span className={styles.flag}>{l.flag}</span> {l.name}
-              </a>
+                <span className={styles.flag}>{language.flag}</span>
+                <span>{language.name}</span>
+              </button>
             ))}
           </div>
         )}
@@ -90,7 +130,7 @@ export default function Header({ title }: HeaderProps) {
             />
           </Link>
 
-          <div className={styles.navButton} onClick={() => setNav(!showNav)}>
+          <div className={styles.navButton} onClick={toggleNavigation}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <g data-name="Layer 2">
                 <g data-name="menu">
@@ -123,47 +163,17 @@ export default function Header({ title }: HeaderProps) {
             </svg>
           </div>
 
-          <nav className={styles.navigation} data-hide={showNav}>
+          <nav className={styles.navigation} data-hide={!showNav}>
             <ul>
-              <li>
-                <Link href={'/#faq'}>{t('nav.faq')}</Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link href={'/#contact'}>{t('nav.contact')}</Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link href={'/sign_in'}>{t('nav.login')}</Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link href={'/sign_up'}>{t('nav.register')}</Link>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <Link href={'/warning'}>{t('nav.warning')}</Link>
-              </li>
-            </ul>
-            <ul>
-              <li
-                style={{
-                  background: '#ff4646',
-                }}
-              >
-                <Link
-                  style={{
-                    color: '#fff',
-                  }}
-                  href={'/lost_found'}
+              {getMenuItems().map((item) => (
+                <li
+                  key={item.href}
+                  className={item.isSpecial ? styles.specialNavItem : ''}
+                  style={item.active ? { background: 'var(--primary)' } : {}}
                 >
-                  {t('nav.iFound')}
-                </Link>
-              </li>
+                  <Link href={item.href}>{item.label}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -171,8 +181,18 @@ export default function Header({ title }: HeaderProps) {
         {title === undefined && (
           <div className={styles.welcomeScreen}>
             <div className={styles.welcomeScreenMotto}>
-              <h1>{t('welcomeScreen.title')}</h1>
-              {/* <h2>{t("welcomeScreen.subtitle")}</h2> */}
+              <h1>
+                {t('welcomeScreen.title')}
+              </h1>
+              <h2>{t('welcomeScreen.subtitle')}</h2>
+              <div style={{ display: 'flex', gap: 'var(--space-lg)', marginTop: 'var(--space-2xl)' }}>
+                <Link href="/lost_found" className="btn-primary">
+                  {t('nav.iFound')}
+                </Link>
+                <Link href="/#faq" className="btn-outline">
+                  {t('learnMore')}
+                </Link>
+              </div>
             </div>
             <div className={styles.welcomeScreenImage}>
               <Image

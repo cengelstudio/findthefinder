@@ -6,14 +6,24 @@
   "register": "Registrati",
   "account": "Account",
   "logout": "Disconnetti",
+  "faq": "FAQ",
+  "warning": "Avvertimento",
+  "lostAndFound": "Oggetti Smarriti",
+  "signIn": "Accedi",
+  "signUp": "Registrati",
+  "getStarted": "Inizia",
+  "learnMore": "Scopri di più",
   "nav": {
-    "faq": "Domande frequenti",
+    "faq": "FAQ",
     "whatIsIt": "Cos'è?",
-    "warning": "Avviso",
+    "contact": "Contatto",
+    "login": "Accedi",
+    "register": "Registrati",
+    "warning": "Avvertimento",
     "iFound": "Ho trovato"
   },
   "welcomeScreen": {
-    "title": "perso & trovato",
-    "subtitle": "Smetti di sparire e di perdere!"
+    "title": "oggetti smarriti",
+    "subtitle": "Smetti di perdere le tue cose!"
   }
 }

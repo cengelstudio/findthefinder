@@ -1,10 +1,10 @@
 {
   "description1": "Es ist ein Werkzeug, das verwendet wird, um verlorene Gegenstände an ihre Besitzer zurückzugeben.",
   "description2": "Wie funktioniert es? Ganz einfach.",
-  "bavulYazi": "WENN SIE MÖCHTEN, KÖNNEN SIE DIE FIND THE FINDER-ETIKETTEN VOR IHRER REISE VERGRÖSSERN UND AUSDRUCKEN UND SIE IHREN KOFFERN HINZUFÜGEN.",
-  "yaziEtiketElektronik": "VERWENDEN SIE IHRE ETIKETTEN, UM SICH AN IHRE KONTODATEN WIE PASSWORT, E-MAIL USW. ZU ERINNERN, DIE FÜR DEN ZUGANG ZU ELEKTRONISCHEN GERÄTEN UND MOBILEN ANWENDUNGEN ERFORDERLICH SIND, DAMIT SIE ES SPÄTER NICHT BEREUEN!",
-  "aniNot1": "BRINGEN SIE DAS ETIKETT AN DEM ORT AN, AN DEM SIE IHRE ERINNERUNGEN, NOTIZBÜCHER, FOTOALBEN USW. AUFBEWAHREN!",
-  "aniNot2": "MELDEN SIE SICH BEI IHREM KONTO AN UND FINDEN SIE EINFACH HERAUS, WAS SIE HABEN, WO UND WO!",
+  "bavulYazi": "Wenn Sie möchten, können Sie die Find The Finder-Etiketten vor Ihrer Reise vergrößern und ausdrucken und sie Ihren Koffern hinzufügen.",
+  "yaziEtiketElektronik": "Verwenden Sie Ihre Etiketten, um sich an Ihre Kontodaten wie Passwort, E-Mail usw. zu erinnern, die für den Zugang zu elektronischen Geräten und mobilen Anwendungen erforderlich sind, damit Sie es später nicht bereuen!",
+  "aniNot1": "Bringen Sie das Etikett an dem Ort an, an dem Sie Ihre Erinnerungen, Notizbücher, Fotoalben usw. aufbewahren!",
+  "aniNot2": "Melden Sie sich bei Ihrem Konto an und finden Sie einfach heraus, was Sie haben, wo und wo!",
   "buySticker": {
     "title": "Scannen Sie den QR-Code auf dem Etikett und melden Sie sich an",
     "description": "Melden Sie sich im System an, wenn Sie einen neuen Code hinzufügen möchten."
@@ -18,12 +18,12 @@
     "description": "Die Person, die den QR-Code auf dem Etikett scannt, gibt ihre Kontaktdaten in das System ein, und diese Informationen werden an Ihre registrierte E-Mail-Adresse gesendet. So können Sie mit dem Finder in Kontakt treten und den Gegenstand sichern."
   },
   "award": {
-    "title": "PREIS",
+    "title": "Preis",
     "description": "Wenn der gefundene Gegenstand an seinen Besitzer zurückgegeben wird, nimmt der Finder am Find The Finder-Gewinnspiel teil. Die Preise werden automatisch an die E-Mail-Adressen der Gewinner der regelmäßig vom System durchgeführten Ziehungen gesendet."
   },
   "youCanFindSafe": {
     "title": "Notiz, um Ihr Passwort, E-Mail-Konto und ähnliche Informationen zu erklären!",
-    "description": "Wenn Sie sich an Ihre Informationen erinnern müssen, melden Sie sich bei Ihrem FIND The Finder-Konto an und sehen Sie jetzt Ihre Bewertung!"
+    "description": "Wenn Sie sich an Ihre Informationen erinnern müssen, melden Sie sich bei Ihrem Find The Finder-Konto an und sehen Sie jetzt Ihre Bewertung!"
   },
   "ftfTag": "Kaufen Sie jetzt das Find The Finder-Sicherheitslabel.",
   "faq": {
@@ -66,7 +66,7 @@
     }
   },
   "contact": {
-    "title": "KONTAKTIEREN SIE UNS",
+    "title": "Kontaktieren Sie uns",
     "name": "Ihr Name",
     "email": "E-Mail-Adresse",
     "phone": "Telefonnummer",

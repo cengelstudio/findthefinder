@@ -2,12 +2,12 @@
   "description1": "Kayıp eşyaların sahiplerine dönmek için kullanılan bir araçtır.",
   "description2": "Nasıl mı? Çok basit.",
 
-  "bavulYazi": "DİLERSENİZ, SEYAHATİNİZDEN ÖNCE FIND THE FINDER ETİKETLERİNİ BÜYÜLTEREK YAZDIRABİLİR, BAVULLARINIZA DA YAPIŞTIRABİLİRSİNİZ.",
+  "bavulYazi": "Dilerseniz, seyahatinizden önce Find The Finder etiketlerini büyülterek yazdırabilir, bavullarınıza da yapıştırabilirsiniz.",
 
-  "yaziEtiketElektronik": "ETİKETLERİNİZİ ELEKTRONIK CIHAZLAR VE MOBIL UYGULAMALAR GİRİŞ İZNİ İÇİN GEREKLİ ŞİFRE, E-POSTA vb. HESAP BİLGİLERİNİZİ HATIRLAMAK ICIN DE KULLANIN, SONRA PİŞMAN OLMAYIN!",
+  "yaziEtiketElektronik": "Etiketlerinizi elektronik cihazlar ve mobil uygulamalar giriş izni için gerekli şifre, e-posta vb. hesap bilgilerinizi hatırlamak için de kullanın, sonra pişman olmayın!",
 
-  "aniNot1": "ANI, NOT DEFTERİ, FOTOĞRAF ALBÜMÜ vb. EŞYALARI SAKLADIĞINIZ YERE ETİKETİ YAPIŞTIRIN!",
-  "aniNot2": "HESABINIZA GİRİŞ YAPIN VE NEREDE NEYİNİZ VAR, KOLAYLIKLA BULUN!",
+  "aniNot1": "Anı, not defteri, fotoğraf albümü vb. eşyaları sakladığınız yere etiketi yapıştırın!",
+  "aniNot2": "Hesabınıza giriş yapın ve nerede neyiniz var, kolaylıkla bulun!",
 
   "buySticker": {
     "title": "Kodu Etkinleştir",
@@ -23,13 +23,13 @@
   },
 
   "award": {
-    "title": "ÖDÜL",
+    "title": "Ödül",
     "description": "Bulunan şey malikine geri verilirse, bulan kimse Find The Finder çekiliş programında yer alır. Periyodik zamanlarda yapılan çekiliş sonucu ödül kazananların e-posta adreslerine sistem tarafından otomatik olarak gönderilmektedir."
   },
 
   "youCanFindSafe": {
-    "title": "SİFRE, E-POSTA HESABI VE BENZERİ BİLGİLERİNİZİ AÇIKLAMAYA NOT EDİN!",
-    "description": "BİLGİLERİNİZİ HATIRLAMANIZ  GEREKTİĞİNDE FIND THE FINDER HESABINIZA GİRİŞ YAPIN VE NOTUNUZA HEMEN BAKIN!"
+    "title": "Şifre, e-posta hesabı ve benzeri bilgilerinizi açıklamaya not edin!",
+    "description": "Bilgilerinizi hatırlamanız gerektiğinde Find The Finder hesabınıza giriş yapın ve notunuza hemen bakın!"
   },
 
   "ftfTag": "Find The Finder eşya güvenlik etiketini hemen satın alın.",
@@ -75,7 +75,7 @@
   },
 
   "contact": {
-    "title": "BİZE ULAŞIN",
+    "title": "Bize Ulaşın",
     "name": "İsminiz",
     "email": "E-Posta adresiniz",
     "phone": "Telefon numaranız",

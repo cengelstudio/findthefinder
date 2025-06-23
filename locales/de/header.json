@@ -1,4 +1,13 @@
 {
+  "home": "Startseite",
+  "faq": "FAQ",
+  "warning": "Warnung",
+  "lostAndFound": "Fundsachen",
+  "signIn": "Anmelden",
+  "signUp": "Registrieren",
+  "getStarted": "Loslegen",
+  "learnMore": "Mehr erfahren",
+  "contact": "Kontakt",
   "nav": {
     "faq": "FAQ",
     "whatIsIt": "Was ist das?",
@@ -9,7 +18,7 @@
     "iFound": "Gefunden"
   },
   "welcomeScreen": {
-    "title": "verloren & gefunden",
-    "subtitle": "Hör auf zu verschwinden und zu verlieren!"
+    "title": "Fundservice",
+    "subtitle": "Verlieren Sie nie wieder etwas!"
   }
 }
