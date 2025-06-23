@@ -174,18 +174,6 @@ docker build -t findthefinder .
 docker run -p 3000:3000 findthefinder
 ```
 
-## 📄 Lisans
-
-Bu proje özel kullanım içindir.
-
-## 🤝 Katkıda Bulunma
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit yapın (`git commit -m 'Add amazing feature'`)
-4. Push yapın (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
-
 ## 🔧 Geliştirici Araçları
 
 - **Prettier**: Kod formatlaması
@@ -194,7 +182,3 @@ Bu proje özel kullanım içindir.
 - **Jest**: Test framework
 - **Docker**: Containerization
 - **GitHub Actions**: CI/CD pipeline
-
-## 📝 Son Güncelleme
-
-Bu dosya Husky test için güncellenmiştir.
