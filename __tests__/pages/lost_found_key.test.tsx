@@ -88,7 +88,7 @@ describe('Found [key] Page', () => {
     render(<Found />);
 
     await waitFor(() => {
-      expect(mockPush).toHaveBeenCalledWith('/signUp?code=TEST123');
+      expect(mockPush).toHaveBeenCalledWith('/sign_up?code=TEST123');
     });
   });
 

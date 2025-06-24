@@ -160,10 +160,10 @@ export default function Found() {
           if (token) {
             router.push('/update?code=' + key);
           } else {
-            router.push('/signUp?code=' + key);
+            router.push('/sign_up?code=' + key);
           }
 
-          // router.push("/signUp?code=" + key)
+          // router.push("/sign_up?code=" + key)
         } else {
           setContent(true);
         }

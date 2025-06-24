@@ -8,11 +8,13 @@ const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 // Mock next/router
 const mockPush = jest.fn();
+const mockRouter = {
+  query: {},
+  asPath: '/sign_up?code=TEST123',
+  push: mockPush,
+};
 jest.mock('next/router', () => ({
-  useRouter: () => ({
-    asPath: '/signUp?code=TEST123',
-    push: mockPush,
-  }),
+  useRouter: () => mockRouter,
 }));
 
 // Mock next-translate

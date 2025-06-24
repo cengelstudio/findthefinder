@@ -11,6 +11,10 @@ const nextConfig = nextTranslate({
       {
         source: '/sitemap.xml',
         destination: '/api/sitemap.xml'
+      },
+      {
+        source: '/found/:code',
+        destination: '/lost_found/:code'
       }
     ];
   },

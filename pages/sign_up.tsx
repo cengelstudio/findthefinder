@@ -25,9 +25,9 @@ export default function Register() {
   const [acceptTerms, setAcceptTerms] = useState<boolean>(false);
 
   useEffect(() => {
-    const key = router.asPath.replace('/signUp?code=', '');
+    const key = router.asPath.replace('/sign_up?code=', '');
 
-    if (key.length !== 0 && !key.includes('/signUp')) {
+    if (key.length !== 0 && !key.includes('/sign_up')) {
       setCode(key);
     }
   }, [router.asPath]);

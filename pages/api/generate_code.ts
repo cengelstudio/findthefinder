@@ -26,7 +26,7 @@ export default async function handler(
     });
 
     const responseString = findAllCodes
-      .map(c => `https://findthefinder.com/found/${c.content},${c.content}`)
+      .map(c => `https://findthefinder.com/lost_found/${c.content},${c.content}`)
       .join('\n');
 
     res.setHeader('Content-Type', 'text/plain');
