@@ -59,7 +59,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
         if (showLang) {
-          setShowLang(false);
+        setShowLang(false);
         }
         if (isMobile && showNav) {
           setNav(false);
@@ -87,7 +87,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
   const toggleNavigation = () => {
     // Sadece mobilde navigation toggle işlemi yap
     if (isMobile) {
-      setNav(!showNav);
+    setNav(!showNav);
     }
   };
 

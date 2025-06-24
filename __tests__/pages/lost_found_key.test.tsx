@@ -74,9 +74,9 @@ describe('Found [key] Page', () => {
     });
 
     await waitFor(() => {
-      expect(screen.getByPlaceholderText('code')).toBeInTheDocument();
-      expect(screen.getByPlaceholderText('email')).toBeInTheDocument();
-      expect(screen.getByPlaceholderText('phone')).toBeInTheDocument();
+      expect(screen.getByPlaceholderText('codePlaceholder')).toBeInTheDocument();
+      expect(screen.getByPlaceholderText('emailPlaceholder')).toBeInTheDocument();
+      expect(screen.getByPlaceholderText('phonePlaceholder')).toBeInTheDocument();
     });
   });
 
@@ -111,9 +111,9 @@ describe('Found [key] Page', () => {
     render(<Found />);
 
     await waitFor(() => {
-      const codeInput = screen.getByPlaceholderText('code');
-      const emailInput = screen.getByPlaceholderText('email');
-      const phoneInput = screen.getByPlaceholderText('phone');
+      const codeInput = screen.getByPlaceholderText('codePlaceholder');
+      const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+      const phoneInput = screen.getByPlaceholderText('phonePlaceholder');
 
       expect(codeInput).toHaveValue('TEST123'); // Should be pre-filled from URL
 
@@ -132,9 +132,9 @@ describe('Found [key] Page', () => {
     render(<Found />);
 
     await waitFor(() => {
-      const codeInput = screen.getByPlaceholderText('code');
-      const emailInput = screen.getByPlaceholderText('email');
-      const submitButton = screen.getByDisplayValue('send');
+      const codeInput = screen.getByPlaceholderText('codePlaceholder');
+      const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+      const submitButton = screen.getByText('send');
 
       fireEvent.change(codeInput, { target: { value: '' } });
       fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
@@ -153,8 +153,8 @@ describe('Found [key] Page', () => {
     render(<Found />);
 
     await waitFor(() => {
-      const emailInput = screen.getByPlaceholderText('email');
-      const submitButton = screen.getByDisplayValue('send');
+      const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+      const submitButton = screen.getByText('send');
 
       fireEvent.change(emailInput, { target: { value: 'invalid-email' } });
       fireEvent.click(submitButton);
@@ -176,12 +176,12 @@ describe('Found [key] Page', () => {
 
     // Wait for the form to be displayed after label_control check
     await waitFor(() => {
-      expect(screen.getByPlaceholderText('code')).toBeInTheDocument();
+      expect(screen.getByPlaceholderText('codePlaceholder')).toBeInTheDocument();
     });
 
-    const emailInput = screen.getByPlaceholderText('email');
-    const phoneInput = screen.getByPlaceholderText('phone');
-    const submitButton = screen.getByDisplayValue('send');
+    const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+    const phoneInput = screen.getByPlaceholderText('phonePlaceholder');
+    const submitButton = screen.getByText('send');
 
     fireEvent.change(emailInput, { target: { value: 'finder@example.com' } });
     fireEvent.change(phoneInput, { target: { value: '1234567890' } });
@@ -192,6 +192,8 @@ describe('Found [key] Page', () => {
         code: 'TEST123',
         email: 'finder@example.com',
         phone: '1234567890',
+        address: '',
+        lang: 'tr',
       });
       // Check that the form was submitted (we get some response)
       expect(window.alert).toHaveBeenCalled();
@@ -208,8 +210,8 @@ describe('Found [key] Page', () => {
     render(<Found />);
 
     await waitFor(() => {
-      const emailInput = screen.getByPlaceholderText('email');
-      const submitButton = screen.getByDisplayValue('send');
+      const emailInput = screen.getByPlaceholderText('emailPlaceholder');
+      const submitButton = screen.getByText('send');
 
       fireEvent.change(emailInput, { target: { value: 'finder@example.com' } });
       fireEvent.click(submitButton);

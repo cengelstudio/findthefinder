@@ -15,6 +15,10 @@ const nextConfig = nextTranslate({
       {
         source: '/found/:code',
         destination: '/lost_found/:code'
+      },
+      {
+        source: '/found',
+        destination: '/lost_found'
       }
     ];
   },

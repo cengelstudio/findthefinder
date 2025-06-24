@@ -2,12 +2,13 @@
   "locales": ["en", "tr", "fr", "ru", "es", "de", "it", "gr"],
   "defaultLocale": "tr",
   "pages": {
-    "*": ["header", "footer", "lost_found", "faq"],
+    "*": ["header", "footer", "lost_found", "faq", "found"],
     "/": ["home"],
     "/sign_up": ["register"],
     "/sign_in": ["login"],
     "/faq": ["why"],
     "/lost_found": ["found"],
+    "/lost_found/[key]": ["found"],
     "/warning": ["warning"],
     "/account": ["account"],
     "/forgot_password": ["forgotPassword"]
