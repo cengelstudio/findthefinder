@@ -1,6 +1,100 @@
-# Find The Finder
+# Find The Finder - Next.js App
 
-An optimized Next.js application for the lost and found item platform.
+Find The Finder; Kaza, tehlike, doğal afet ve kişisel dalgınlık sonucu oluşan mal veya can kaybına karşı en hızlı şekilde ulaşmayı sağlayan bir araçtır.
+
+## 🚀 GitHub Pages Deployment
+
+Bu proje GitHub Pages'da otomatik olarak deploy edilecek şekilde yapılandırılmıştır.
+
+### Deployment Süreci
+
+1. `main` branch'e push yaptığınızda otomatik deployment başlar
+2. GitHub Actions workflow'u çalışır:
+   - Dependencies yüklenir
+   - Testler çalıştırılır
+   - Linting kontrolü yapılır
+   - Proje build edilir ve static export alınır
+   - GitHub Pages'a deploy edilir
+
+### GitHub Pages Ayarları
+
+Repository ayarlarında GitHub Pages'i etkinleştirmek için:
+
+1. Repository > Settings > Pages
+2. Source: "Deploy from a branch"
+3. Branch: "gh-pages"
+4. Folder: "/ (root)"
+
+### Önemli Notlar
+
+- Proje static export modunda çalışır
+- API route'lar GitHub Pages'da çalışmaz (static site)
+- Proje repository adını otomatik olarak base path olarak kullanır
+
+## 🛠️ Development
+
+```bash
+# Dependencies yükle
+npm install
+
+# Development server başlat
+npm run dev
+
+# Build al
+npm run build
+
+# Static export oluştur
+npm run export
+
+# Testleri çalıştır
+npm run test
+
+# Linting
+npm run lint
+```
+
+## 📁 Project Structure
+
+```
+nextapp/
+├── .github/workflows/     # GitHub Actions workflows
+├── components/            # React components
+├── pages/                # Next.js pages
+├── styles/               # CSS modules
+├── locales/              # i18n translations
+├── lib/                  # Utility functions
+├── __tests__/            # Test files
+└── public/               # Static assets
+```
+
+## 🌐 Deployment URLs
+
+- Production: `https://[username].github.io/[repository-name]/`
+- Development: `http://localhost:3000`
+
+## 🔧 Configuration
+
+- `next.config.js` - Next.js ve GitHub Pages konfigürasyonu
+- `i18n.json` - Çoklu dil desteği
+- `.github/workflows/deploy.yml` - GitHub Actions deployment
+
+## 📝 Features
+
+- ✅ Responsive design
+- ✅ Multi-language support (TR, EN, FR, DE, ES, IT, RU, GR)
+- ✅ SEO optimized
+- ✅ Automatic GitHub Pages deployment
+- ✅ Jest testing
+- ✅ ESLint + Prettier
+- ✅ TypeScript support
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## 🚀 Project Structure
 
@@ -174,7 +268,7 @@ docker build -t findthefinder .
 docker run -p 3000:3000 findthefinder
 ```
 
-## �� Developer Tools
+## 🔧 Developer Tools
 
 - **Prettier**: Code formatting
 - **ESLint**: Code quality control
