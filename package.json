@@ -43,7 +43,7 @@
     "sequelize": "^6.28.0",
     "sequelize-typescript": "^2.1.5",
     "twilio": "^3.84.1",
-    "typescript": "4.9.4"
+    "typescript": "5.8.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
