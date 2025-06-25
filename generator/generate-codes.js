@@ -99,15 +99,14 @@ async function generateUniqueCodes(count, length = 8, prefix = '') {
 /**
  * Kodları veritabanına kaydeder
  * @param {string[]} codes Kaydedilecek kodlar
- * @param {string} note Kodlar için not
  * @returns {Promise<number>} Kaydedilen kod sayısı
  */
-async function saveCodesToDatabase(codes, note) {
+async function saveCodesToDatabase(codes) {
   console.log('Kodlar veritabanına kaydediliyor...');
 
   const codeData = codes.map(code => ({
     content: code,
-    note: note || `Otomatik üretilen kod - ${new Date().toISOString()}`,
+    note: `Otomatik üretilen kod - ${new Date().toISOString()}`,
     created_at: new Date(),
     updated_at: new Date()
   }));
@@ -159,15 +158,14 @@ async function main() {
   const args = process.argv.slice(2);
 
   if (args.length === 0) {
-    console.log('Kullanım: node generator/generate-codes.js <kod_sayısı> [kod_uzunluğu] [prefix] [not]');
-    console.log('Örnek: node generator/generate-codes.js 1000 8 "PROMO" "Test kodları"');
+    console.log('Kullanım: node generator/generate-codes.js <kod_sayısı> [kod_uzunluğu] [prefix]');
+    console.log('Örnek: node generator/generate-codes.js 1000 8 "PROMO"');
     process.exit(1);
   }
 
   const count = parseInt(args[0]);
   const length = args[1] ? parseInt(args[1]) : 8;
   const prefix = args[2] || '';
-  const note = args[3] || undefined;
 
   if (isNaN(count) || count <= 0) {
     console.error('Geçersiz kod sayısı. Pozitif bir sayı girin.');
@@ -184,7 +182,6 @@ async function main() {
     if (prefix) {
       console.log(`Prefix: ${prefix}`);
     }
-    console.log(`Not: ${note || 'Belirtilmedi'}`);
 
     // Eşsiz kodları üret
     const codes = await generateUniqueCodes(count, length, prefix);
@@ -195,7 +192,7 @@ async function main() {
     }
 
     // Veritabanına kaydet
-    const savedCount = await saveCodesToDatabase(codes, note);
+    const savedCount = await saveCodesToDatabase(codes);
 
     // CSV dosyasına kaydet
     saveCodesToCSV(codes);

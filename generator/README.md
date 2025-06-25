@@ -1,33 +1,8 @@
-# Kod Üretme Script'i
-
-Bu script, veritabanındaki `code` tablosuna eşsiz kodlar üretir ve bunları CSV formatında dışa aktarır.
-
-## Özellikler
-
-- ✅ Eşsiz kodlar üretir (veritabanında mevcut olmayan)
-- ✅ Prefix ekleme özelliği
-- ✅ Kodları veritabanına kaydeder
-- ✅ CSV formatında dışa aktarır (sadece kodlar)
-- ✅ Özelleştirilebilir kod uzunluğu
-- ✅ Not ekleme özelliği
-- ✅ İlerleme göstergesi
-- ✅ Hata yönetimi
-
-## Kurulum
-
-1. Gerekli bağımlılıkları yükleyin:
-```bash
-npm install
-```
-
-2. Prisma client'ı güncelleyin:
-```bash
-npx prisma generate
-```
+# Code Generator
 
 ## Kullanım
 
-### Bash Script ile (Önerilen)
+### Bash Script
 
 ```bash
 # Temel kullanım
@@ -37,10 +12,10 @@ npx prisma generate
 ./generator/generate-codes.sh 1000 8
 
 # Prefix ekleme
-./generator/generate-codes.sh 1000 8 "PROMO"
+./generator/generate-codes.sh 1000 8 "Prefix"
 
 # Prefix ve not ekleme
-./generator/generate-codes.sh 1000 8 "PROMO" "Test kodları"
+./generator/generate-codes.sh 1000 8 "Prefix" "Not buraya"
 ```
 
 ### JavaScript ile Doğrudan
@@ -53,10 +28,10 @@ node generator/generate-codes.js 1000
 node generator/generate-codes.js 1000 8
 
 # Prefix ekleme
-node generator/generate-codes.js 1000 8 "PROMO"
+node generator/generate-codes.js 1000 8 "Prefix"
 
 # Prefix ve not ekleme
-node generator/generate-codes.js 1000 8 "PROMO" "Test kodları"
+node generator/generate-codes.js 1000 8 "Prefix" "Not buraya"
 ```
 
 ## Parametreler
@@ -68,27 +43,6 @@ node generator/generate-codes.js 1000 8 "PROMO" "Test kodları"
 | `prefix` | string | ❌ | - | Kod başına eklenecek prefix |
 | `not` | string | ❌ | - | Kodlar için açıklama |
 
-## Örnekler
-
-### 1000 adet 8 karakterlik kod üretme
-```bash
-./generator/generate-codes.sh 1000
-```
-
-### 500 adet 10 karakterlik kod üretme
-```bash
-./generator/generate-codes.sh 500 10
-```
-
-### 2000 adet kod üretme ve prefix ekleme
-```bash
-./generator/generate-codes.sh 2000 8 "PROMO"
-```
-
-### Prefix ve not ile kod üretme
-```bash
-./generator/generate-codes.sh 1000 8 "PROMO" "Promosyon kodları 2024"
-```
 
 ## Çıktılar
 
@@ -101,10 +55,10 @@ Script çalışırken aşağıdaki bilgileri gösterir:
 - Hata mesajları (varsa)
 
 ### CSV Dosyası
-`generator/output/` klasöründe aşağıdaki formatta CSV dosyası oluşturulur:
+`output/` klasöründe aşağıdaki formatta CSV dosyası oluşturulur:
 
 ```
-PROMOABC12345;PROMOXYZ67890;PROMODEF45678
+prefixABC12345;prefixXYZ67890;prefixEF45678
 ```
 
 **Not**: CSV dosyası sadece kodları içerir, noktalı virgülle ayrılmış şekilde.
@@ -124,55 +78,3 @@ Kodlar `code` tablosuna aşağıdaki alanlarla kaydedilir:
 - Belirtilen uzunlukta olur (prefix hariç)
 - Veritabanında benzersizdir
 - Okunabilir ve yazılabilir formattadır
-
-### Prefix Örnekleri
-
-```bash
-# PROMO prefix'i ile
-./generator/generate-codes.sh 100 8 "PROMO"
-# Sonuç: PROMOABC12345, PROMOXYZ67890, ...
-
-# VIP prefix'i ile
-./generator/generate-codes.sh 100 8 "VIP"
-# Sonuç: VIPABC12345, VIPXYZ67890, ...
-
-# Prefix olmadan
-./generator/generate-codes.sh 100 8
-# Sonuç: ABC12345, XYZ67890, ...
-```
-
-## Güvenlik
-
-- Script, mevcut kodları kontrol ederek çakışmaları önler
-- Veritabanı bağlantısı güvenli şekilde kapatılır
-- Hata durumunda temiz çıkış yapar
-
-## Sorun Giderme
-
-### "Veritabanı bağlantı hatası"
-- Prisma schema dosyasını kontrol edin
-- Veritabanı bağlantı bilgilerini doğrulayın
-- `npx prisma generate` komutunu çalıştırın
-
-### "Kod üretilemedi"
-- Kod uzunluğunu azaltın
-- Daha az kod sayısı deneyin
-- Veritabanında çok fazla kod varsa, farklı bir uzunluk deneyin
-
-### "Permission denied"
-- Script dosyasının çalıştırılabilir olduğundan emin olun:
-```bash
-chmod +x generator/generate-codes.sh
-```
-
-## Geliştirme
-
-Script'i özelleştirmek için `generator/generate-codes.js` dosyasını düzenleyebilirsiniz:
-
-- Kod karakter setini değiştirmek için `generateUniqueCode` fonksiyonunu düzenleyin
-- CSV formatını değiştirmek için `saveCodesToCSV` fonksiyonunu düzenleyin
-- Veritabanı alanlarını değiştirmek için `saveCodesToDatabase` fonksiyonunu düzenleyin
-
-## Lisans
-
-Bu script projenin genel lisansı altında dağıtılır.

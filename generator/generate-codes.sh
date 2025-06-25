@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Kod üretme script'i
-# Kullanım: ./generator/generate-codes.sh <kod_sayısı> [kod_uzunluğu] [prefix] [not]
+# Kullanım: ./generator/generate-codes.sh <kod_sayısı> [kod_uzunluğu] [prefix]
 
 set -e
 
@@ -23,13 +23,12 @@ if [ $# -eq 0 ]; then
     echo -e "${RED}❌ Hata: Kod sayısı belirtilmedi!${NC}"
     echo ""
     echo "Kullanım:"
-    echo "  ./generator/generate-codes.sh <kod_sayısı> [kod_uzunluğu] [prefix] [not]"
+    echo "  ./generator/generate-codes.sh <kod_sayısı> [kod_uzunluğu] [prefix]"
     echo ""
     echo "Örnekler:"
     echo "  ./generator/generate-codes.sh 1000"
     echo "  ./generator/generate-codes.sh 1000 8"
     echo "  ./generator/generate-codes.sh 1000 8 \"PROMO\""
-    echo "  ./generator/generate-codes.sh 1000 8 \"PROMO\" \"Test kodları\""
     echo ""
     exit 1
 fi
@@ -37,7 +36,6 @@ fi
 COUNT=$1
 LENGTH=${2:-8}
 PREFIX=${3:-""}
-NOTE=${4:-""}
 
 # Parametreleri doğrula
 if ! [[ "$COUNT" =~ ^[0-9]+$ ]] || [ "$COUNT" -le 0 ]; then
@@ -54,7 +52,6 @@ echo -e "${YELLOW}📊 Parametreler:${NC}"
 echo "  Kod sayısı: $COUNT"
 echo "  Kod uzunluğu: $LENGTH"
 echo "  Prefix: ${PREFIX:-'Belirtilmedi'}"
-echo "  Not: ${NOTE:-'Belirtilmedi'}"
 echo ""
 
 # Node.js ve npm'in yüklü olup olmadığını kontrol et
@@ -85,9 +82,7 @@ npx prisma generate
 echo -e "${BLUE}🚀 Kod üretme script'i çalıştırılıyor...${NC}"
 echo ""
 
-if [ -n "$NOTE" ]; then
-    node generator/generate-codes.js "$COUNT" "$LENGTH" "$PREFIX" "$NOTE"
-elif [ -n "$PREFIX" ]; then
+if [ -n "$PREFIX" ]; then
     node generator/generate-codes.js "$COUNT" "$LENGTH" "$PREFIX"
 else
     node generator/generate-codes.js "$COUNT" "$LENGTH"
