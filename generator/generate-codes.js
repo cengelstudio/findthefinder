@@ -106,7 +106,7 @@ async function saveCodesToDatabase(codes) {
 
   const codeData = codes.map(code => ({
     content: code,
-    note: `Otomatik üretilen kod - ${new Date().toISOString()}`,
+    note: ``,
     created_at: new Date(),
     updated_at: new Date()
   }));
