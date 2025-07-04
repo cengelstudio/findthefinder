@@ -347,6 +347,8 @@ export default function Found() {
   const [showContent, setContent] = useState<boolean>(false);
 
   useEffect(() => {
+    if (!key) return; // key undefined ise API çağrısı yapma
+
     try {
       (async () => {
         const response = await axios.post('/api/label_control', {
@@ -364,13 +366,41 @@ export default function Found() {
         }
       })();
     } catch (e) {
-      console.log(e);
+      console.log('API Error:', e);
+      // Hata durumunda da loading'i kaldır ve kullanıcıya formu göster
+      setContent(true);
     }
   }, [key, router, token]);
 
   return (
     <>
-      {!showContent && 'Loading...'}
+      {!showContent && (
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minHeight: '100vh',
+          fontSize: '1.2rem',
+          color: 'var(--text-secondary)'
+        }}>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 'var(--space-md)'
+          }}>
+            <div style={{
+              width: '40px',
+              height: '40px',
+              border: '3px solid var(--border-light)',
+              borderTop: '3px solid var(--primary)',
+              borderRadius: '50%',
+              animation: 'spin 1s linear infinite'
+            }}></div>
+            <span>Yükleniyor...</span>
+          </div>
+        </div>
+      )}
       {showContent && <Content />}
     </>
   );

@@ -352,11 +352,20 @@
     position: absolute;
     top: var(--space-lg);
     right: calc(var(--space-lg) + 60px);
-    z-index: 300;
+    z-index: 1000;
+  }
+
+  .languageButton {
+    min-width: 44px;
+    min-height: 44px;
+    padding: var(--space-sm) var(--space-md);
   }
 
   .navButton {
     display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    padding: var(--space-sm);
   }
 
   .navigation {
@@ -370,6 +379,7 @@
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
+    z-index: 999;
   }
 
   .bigHeader:has(.bigTitle) .navigation {
@@ -381,6 +391,12 @@
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+
+  .navigation[data-hide='true'] {
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
   }
 
   .navigation ul {

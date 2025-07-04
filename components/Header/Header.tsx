@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 export default function Header({ title, subtitle }: HeaderProps) {
   const router = useRouter();
-  const [showNav, setNav] = useState<boolean>(false);
+  const [showNav, setNav] = useState<boolean>(true);
   const [showLang, setShowLang] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const langRef = useRef<HTMLDivElement>(null);
@@ -81,13 +81,15 @@ export default function Header({ title, subtitle }: HeaderProps) {
   };
 
   const toggleLanguageMenu = () => {
+    console.log('Toggle language menu:', !showLang);
     setShowLang(!showLang);
   };
 
   const toggleNavigation = () => {
     // Sadece mobilde navigation toggle işlemi yap
     if (isMobile) {
-    setNav(!showNav);
+      console.log('Toggle navigation:', !showNav);
+      setNav(!showNav);
     }
   };
 
@@ -127,6 +129,10 @@ export default function Header({ title, subtitle }: HeaderProps) {
         <button
           className={styles.languageButton}
           onClick={toggleLanguageMenu}
+          onTouchStart={(e) => {
+            e.preventDefault();
+            toggleLanguageMenu();
+          }}
           aria-expanded={showLang}
           aria-haspopup="true"
         >
@@ -162,7 +168,14 @@ export default function Header({ title, subtitle }: HeaderProps) {
             />
           </Link>
 
-          <div className={styles.navButton} onClick={toggleNavigation}>
+          <div
+            className={styles.navButton}
+            onClick={toggleNavigation}
+            onTouchStart={(e) => {
+              e.preventDefault();
+              toggleNavigation();
+            }}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <g data-name="Layer 2">
                 <g data-name="menu">
@@ -195,7 +208,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
             </svg>
           </div>
 
-          <nav className={styles.navigation} data-hide={!showNav}>
+          <nav className={styles.navigation} data-hide={showNav ? 'false' : 'true'}>
             <ul>
               {getMenuItems().map((item) => (
                 <li
